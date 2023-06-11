@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>منصة مستر احمد ابوعرب</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/all.min.css'>
+</head>
+<body>
+    <div style="display: none" id="pageTitle">dashboard</div>
+
+
+    <header class="navbar" role="navigation" aria-label="main navigation" class="linksMenu">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="/">
+                <img src="/assets/images/logo.png">
+            </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/" whtpg="home" class="navbar-item"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="/learn" whtpg="learn" class="navbar-item"><i class="fa-solid fa-tv"></i><span>المحاضرات</span></a>
+                <a href="/sheets" whtpg="sheets" class="navbar-item"><i class="fa-solid fa-sheet-plastic"></i><span>الملازم</span></a>
+            </div>
+
+            <div class="navbar-start">
+                <div class="navbar-item responsivePadd">
+                    <div class="field has-addons">
+                        <div class="control">
+                            <button class="button is-small is-gold is-rounded" id="searchbtn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input class="input is-small is-rounded" type="text" placeholder="ابحث عن محاضرة">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="navbar-end">
+                <a class="navbar-item responsivePadd" whtpg="dashboard" href="/dashboard"><i class="fas fa-user-circle"></i></a>
+                <p class="navbar-item responsivePadd" mode="modeChange"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobileHeader is-flex is-justify-content-space-evenly">
+        <a class="navbar-item mobileHide" href="/" whtpg="home"><i class="fa-solid fa-house"></i></a>
+        <a class="navbar-item mobileHide" href="/learn" whtpg="learn"><i class="fa-solid fa-tv"></i></a>
+        <a class="navbar-item mobileHide" href="/sheets" whtpg="sheets"><i class="fa-solid fa-sheet-plastic"></i></a>
+        <a class="navbar-item mobileHide" href="/dashboard" whtpg="dashboard"><i class="fas fa-user-circle"></i></a>
+        <p class="navbar-item mobileHide" mode="modeChange"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></p>
+    </nav>
+
+    <div class="contentBox">
+        <section class="section customized form">
+            <div class="columns is-rounded">
+                <div class="column is-5 has-text-centered is-rounded is-gradientY19">
+                    <div class="has-text-centered text-centered-vertc">
+                        <h2 class="title is-size-3 has-text-white">مرحبا لك في المنصة!</h2>
+                        <p class="is-size-5 has-text-white">افضل منصة عربية لتعلم الفيزياء لطلاب الثانوية العامة بطرق مبسطة ممتعة!</p>
+                    </div>
+                </div>
+                <div class="column is-7 paddingRight80 paddingleft20">
+                    <p class="title is-size-3">انشاء حساب</p>
+                    <p class="is-size-55 has-text-weight-medium">انشئ حساب للانضمام للمنصة</p>
+                    <br>
+                    <form>
+                        <div class="field">
+                            <label class="label has-text-grey">الاسم الكامل</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" placeholder="ادخل اسمك الثلاثي">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-signature"></i>
+                                </span>
+                            </div>
+                        </div>
+                          
+                        <div class="field">
+                            <label class="label has-text-grey">البريد الالكتروني</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="email" placeholder="ادخل البريد الالكتروني">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label has-text-grey">رقم الهاتف</label>
+                            <div class="control has-icons-left">
+                                <input class="input has-text-right" type="tel" placeholder="رقم الهاتف">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-grey">رقم هاتف ولي الامر1</label>
+                            <div class="control has-icons-left">
+                                <input class="input has-text-right" type="tel" placeholder="رقم هاتف ولي الامر 1">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-grey">رقم هاتف ولي الامر 2</label>
+                            <div class="control has-icons-left">
+                                <input class="input has-text-right" type="tel" placeholder="رقم هاتف ولي الامر 2">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                            </div>
+                        </div>
+                          
+                        <div class="field">
+                            <label class="label has-text-grey">كلمة المرور</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" placeholder="ادخل كلمة المرور">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label has-text-grey">اعادة كتابة كلمة المرور</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" placeholder="اعادة كتابة كلمة المرور">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <button class="button is-gold is-semilarge">انشاء حساب</button>
+                    </form>
+                </div>
+            </div>
+        </section>          
+    </div>
+
+    <footer class="footer">
+        <div class="is-12">
+            <div class="is-flex is-justify-content-center">
+                <a class="footerIcon TE"><i class="fa-solid fa-paper-plane"></i></a>
+                <a class="footerIcon WH"><i class="fa-brands fa-whatsapp"></i></a>
+                <a class="footerIcon YT"><i class="fa-brands fa-youtube"></i></a>
+                <a class="footerIcon FB"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="is-12">
+            <p class="is-size-55 has-text-centered has-text-weight-medium">طورت هذه المنصة بكل حب, لتهيئة طلاب الثانوية في مادة الفيزياء.</p>
+            <p class="is-size-6 has-text-weight-medium names has-text-centered">طورت بواسطة <a href="" class="name">محمد مصطفى</a>, <a href="" class="name">حمزة القطب</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+<script src='/assets/js/main.js'></script>
