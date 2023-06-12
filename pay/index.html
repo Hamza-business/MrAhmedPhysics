@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>منصة مستر احمد ابوعرب</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/all.min.css'>
+</head>
+<body>
+    <div style="display: none" id="pageTitle">dashboard</div>
+
+
+    <header class="navbar" role="navigation" aria-label="main navigation" class="linksMenu">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="/">
+                <img src="/assets/images/logo.png">
+            </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/" whtpg="home" class="navbar-item"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="/learn" whtpg="learn" class="navbar-item"><i class="fa-solid fa-tv"></i><span>المحاضرات</span></a>
+                <a href="/sheets" whtpg="sheets" class="navbar-item"><i class="fa-solid fa-sheet-plastic"></i><span>الملازم</span></a>
+            </div>
+    
+            <div class="navbar-end">
+                <a class="navbar-item responsivePadd" whtpg="dashboard" href="/dashboard"><i class="fas fa-user-circle"></i></a>
+                <button class="navbar-item responsivePadd" showPop="notifications"><i class="fa-solid fa-bell"></i></button>
+                <button class="navbar-item responsivePadd" mode="modeChange"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobileHeader is-flex is-justify-content-space-evenly">
+        <a class="navbar-item mobileHide" href="/" whtpg="home"><i class="fa-solid fa-house"></i></a>
+        <a class="navbar-item mobileHide" href="/learn" whtpg="learn"><i class="fa-solid fa-tv"></i></a>
+        <a class="navbar-item mobileHide" href="/sheets" whtpg="sheets"><i class="fa-solid fa-sheet-plastic"></i></a>
+        <a class="navbar-item mobileHide" href="/dashboard" whtpg="dashboard"><i class="fas fa-user-circle"></i></a>
+        <button class="navbar-item responsivePadd" showPop="notifications"><i class="fa-solid fa-bell"></i></button>
+        <button class="navbar-item mobileHide" mode="modeChange"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+    </nav>
+
+    <section class="hero is-fullheight Payways">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-9">
+                        <form action="" class="box isPay">
+                            <h1 class="is-gold-dark is-size-2 has-text-centered has-text-weight-semibold">الدفع</h1>
+                            <h2 class="is-size-4 has-text-weight-semibold has-text-grey-dark">الاشتراك في</h2>
+                            <p class="is-gold-light has-text-weight-bold is-size-6">الشهر الأول من شرح المنهج للصف الثالث الثانوي - <span class="is-gold-dark">150</span> ج.م</p>
+
+                            <div class="inputField">
+                                <input value="" required="" class="input is-gold has-text-weight-bold" type="number">
+                                <span class="is-size-4">ج.م</span>
+                            </div>
+
+                            <h2 class="is-size-4 has-text-weight-semibold has-text-grey-dark">طريقة الدفع:</h2>
+                            <div id="selectedShow" class="columns selectedShow" onclick="payWayShow()">
+                                <div class="column is-11 is-size-5">
+                                    <p class="has-text-grey-darker has-text-weight-medium">الدفع بواسطة: <span id="payWay" class="has-text-weight-normal has-text-grey-dark">لم يتم اختيار طريقة دفع</span></p>
+                                    <p class="subtitle is-6 has-text-grey-darker has-text-weight-medium" id="taxs">الضريبة غير محدده</p>
+                                </div>
+                                <div class="column is-1 is-size-5">
+                                    <i class="fas fa-chevron-down" id="iconro"></i>
+                                </div>
+                            </div>
+
+                            <section id="section" class="column is-flex is-flex-direction-column pySection">
+                                <div class="row is-size-5 paywayo">
+                                    <p>
+                                        <img src="/assets/images/f2.png" style="width: 20px;" alt="">
+                                        <span class="togeto">ماكينات فوري</span>
+                                        <span class="imgContW">
+                                            <img src="/assets/images/f1.jpg" class="img1W">
+                                        </span>
+                                    </p>
+                                    <p class="subtitle is-6 togeto"> يضاف 2.5% + 4.5 ج.م مصاريف ادارية </p>
+                                    
+                                    <label class="radio">
+                                        <input type="radio" id="">
+                                    </label>                                   
+                                </div>
+
+                                <div class="row is-size-5 paywayo">
+                                    <p>
+                                        <img src="/assets/images/bank.png" style="width: 20px;" alt="">
+                                        <span class="togeto">فودافاون كاش</span>
+                                        <span class="imgContW">
+                                            <img src="/assets/images/fod.png" class="img1W">
+                                        </span>
+                                    </p>
+                                    <p class="subtitle is-6 togeto">يضاف 1.5% + 2 ج.م مصاريف ادارية</p>
+                                    
+                                    <label class="radio">
+                                        <input type="radio" id="">
+                                    </label>
+                                </div>
+
+                                <div class="row is-size-5 paywayo">
+                                    <p>
+                                        <img src="/assets/images/bank.png" style="width: 20px;" alt="">
+                                        <span class="togeto">فيزا</span>
+                                        <span class="imgContW">
+                                            <img src="/assets/images/vis.png" class="img1W">
+                                        </span>
+                                    </p>
+                                    <p class="subtitle is-6 togeto"> يضاف 1.5% + 2 ج.م مصاريف ادارية </p>
+                                    
+                                    <label class="radio">
+                                        <input type="radio" id="">
+                                    </label>
+                                </div>
+
+                                <div class="row is-size-5 paywayo">
+                                    <p>
+                                        <img src="/assets/images/op.png" style="width: 20px;" alt="">
+                                        <span class="togeto">اوباي</span>
+                                        <span class="imgContW">
+                                            <img src="/assets/images/opay.png" class="img1W">
+                                        </span>
+                                    </p>
+                                    <p class="subtitle is-6 togeto"> يضاف 1.5% + 3 ج.م مصاريف ادارية </p>
+                                    
+                                    <label class="radio">
+                                        <input type="radio" id="">
+                                    </label>
+                                </div>
+                            </section>
+
+                            <div class="notes">
+                                المبلغ بعد اضافة المصاريف الادارية:
+                                <input type="number" class="inpu" name="amountDeducted">
+                            </div>
+
+                            <div class="field">
+                                <button class="button is-gold is-semilarge">استكمال الدفع</button>
+                            </div>
+
+                            <hr>
+
+                            <p class="foct">اذا شحنت من قبل و تريد تأكيد المعاملة، اضغط <a href="" class="is-gold has-text-weight-semibold">هنا</a> </p>
+                            <p class="has-text-weight-bold is-size-65">المصاريف الإدارية خاصة بشركات التحويل وليس للمنصة دخل فيها.</p>
+                            <p class="is-gold has-text-weight-bold is-size-65">لا يمكن استرداد أية مبالغ مالية تم قبولها على المنصة تحت أي مسمى كان</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="is-12">
+            <div class="is-flex is-justify-content-center">
+                <a class="footerIcon TE" href="https://t.me/ItsAhmedAbuArab"><i class="fa-solid fa-paper-plane"></i></a>
+                <a class="footerIcon YT" href="https://www.youtube.com/@AhmedAbuArab"><i class="fa-brands fa-youtube"></i></a>
+                <a class="footerIcon FB" href="https://www.facebook.com/ItsAhmedAbuArab"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="is-12">
+            <p class="is-size-55 has-text-centered has-text-weight-medium">طورت هذه المنصة بكل حب, لتهيئة طلاب الثانوية في مادة الفيزياء.</p>
+            <p class="is-size-6 has-text-weight-medium names has-text-centered">طورت بواسطة <a href="https://www.linkedin.com/in/mmostafa261" class="name">محمد مصطفى</a>, <a href="https://www.facebook.com/HamzaElkotp/" class="name">حمزة القطب</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src='/assets/js/main.js'></script>

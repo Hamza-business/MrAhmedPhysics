@@ -642,11 +642,16 @@ input.input, .select select{
 
 
 
-
-a.is-gold{
+.is-gold-light{
+    color: var(--yellow50);
+}
+.is-gold-dark{
+    color: var(--yellow70);
+}
+a.is-gold, p.is-gold, span.is-gold, h1.is-gold{
     color: var(--yellow60);
 }
-a.is-gold:hover{
+a.is-gold:hover, p.is-gold:hover, span.is-gold:hover{
     color: var(--yellow90);
 }
 
@@ -694,3 +699,154 @@ input.is-none{
 
 
 
+
+
+
+.isPay{
+    border: 2px solid var(--yellow70);
+}
+.isPay .isT{
+    margin-bottom: 10px;
+}
+.isPay .inputField{
+    margin-top: 15px;    
+    margin-bottom: 15px; 
+}
+.isPay input{
+    width: 200px;   
+    margin-left: 10px; 
+}
+.isPay .selectedShow {
+    background-color: var(--yellowTr);
+    border-radius: 15px;
+    border: 2px dashed var(--yellow70);
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    cursor: pointer;
+    margin-right: 0;
+    opacity: 0.8;
+    transition: 0.5s;
+    width: calc(100% - 2px);
+}
+.isPay .selectedShow.active {
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+}
+.isPay .selectedShow:hover {
+    opacity: 1;
+    border-color: var(--yellow90);
+}
+.isPay .column.is-1.is-size-5 i {
+    margin-top: 14px;
+    font-size: 25px;
+    padding: 0;
+    transition: 0.5s;
+}
+.isPay .selectedShow.active .column.is-1.is-size-5 i {
+    color: var(--yellow60);
+}
+.isPay .column.is-1.is-size-5 i.active {
+    rotate: 90deg;
+}
+.isPay .inpu {
+    border: 0;
+    font-size: 15px;
+    width: auto;
+}
+.isPay .notes {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.pySection {
+    background-color: var(--yellowTr);
+    border-right: 2px dashed var(--yellow60);
+    border-left: 2px dashed var(--yellow60);
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-left: 2px;
+    transition: 0.5s;
+    padding: 0;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+.pySection.active {
+    padding-top: 10px !important;
+    height: max-content;
+    border-bottom: 2px dashed var(--yellow40) !important;
+    border-radius: 0 0 15px 15px;
+}
+.pySection:hover {
+    border-color: #777777;
+}
+.pySection div{
+    opacity: 0.8;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.pySection div:hover{
+    opacity: 1;
+}
+.pySection .paywayo {
+    border-top: 1px solid var(--main-color) !important;
+    padding: 10px 20px !important;
+    border-radius: 15px !important;
+}
+.pySection .paywayo.active {
+    background-color: #f9da7ea3;
+    opacity: 1;
+}
+.pySection .paywayo:hover {
+    background-color: #f9da7ea3;
+}
+.pySection .paywayo .img1W {
+    -ms-transform: scale(2); 
+    -webkit-transform: scale(2); 
+    transform: scale(2);
+    margin-top: 10px;
+}
+.pySection .paywayo input {
+    float:left; 
+    margin-top: 9px;
+    vertical-align: middle; 
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+}
+.pySection .paywayo .imgContW {
+    float:left;
+    height:20px;
+    width:30px;
+}
+.pySection .radio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+}
+.pySection .radio input{
+    opacity: 0;
+}
+.pySection .subtitle.is-6 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.pySection .paywayo{
+    position: relative
+}
+@media (max-width: 440px){
+    /* .Home_hero .buttons-cont {
+        margin-right: -20px;
+    }
+
+    .Home_hero .is-bg-red.is-rounded {
+        padding: 20px 27px !important;
+    } */
+    
+    .Payways .hero-body{
+        padding-left: 10px;
+        padding-right: 1px;
+    }
+    
+}

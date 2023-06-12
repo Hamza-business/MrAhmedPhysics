@@ -70,7 +70,7 @@ const showValidationBox = function(){
     }, 0);
 }
 const varificationButton = function(){
-    valPhBtn.addEventListener("click", (e)=>{
+    valPhBtn?.addEventListener("click", (e)=>{
         e.preventDefault()
         valPhBtn.style.opacity = 0.3;
         valPhBtn.setAttribute("disabled","true");
@@ -132,13 +132,13 @@ function phoneCheck(phone, second, i) {
     }
 }
 
-phoneInputs[0].addEventListener('change', ()=>{
+phoneInputs[0]?.addEventListener('change', ()=>{
     studentPhoneCheck(phoneInputs[0]);
 })
-phoneInputs[1].addEventListener('change', ()=>{
+phoneInputs[1]?.addEventListener('change', ()=>{
     phoneCheck(phoneInputs[1], phoneInputs[2], 1);
 })
-phoneInputs[2].addEventListener('change', ()=>{
+phoneInputs[2]?.addEventListener('change', ()=>{
     phoneCheck(phoneInputs[2], phoneInputs[1], 2);
 })
 
@@ -149,3 +149,45 @@ document.getElementById("submit")?.addEventListener("click", function (event) {
         alert("يرجى ادخال البيانات المطلوبة بشكل صحيح")
     }
 });
+
+
+
+
+
+
+
+
+
+
+function payWayShow(){
+    let clicko = document.getElementById("selectedShow");
+    clicko.classList.toggle("active");
+    let iconro = document.getElementById("iconro");
+    iconro.classList.toggle("active");
+    let paySection = document.getElementById("section");
+    paySection.classList.toggle("active");
+}
+
+function payouts(){
+    try{
+        let clicko = document.getElementById("selectedShow");
+        let payo = document.getElementById("payWay");
+        let ta = document.getElementById("taxs");
+        let elese = document.querySelectorAll(".paywayo");
+        elese.forEach((ele)=>{
+            ele.addEventListener("click",()=>{
+                let pa1 = ele.querySelectorAll(".togeto")[0];
+                let ta1 = ele.querySelectorAll(".togeto")[1];
+                payo.innerHTML = pa1.textContent
+                ta.innerHTML = ta1.textContent
+                elese.forEach((el)=>{
+                    el.classList.remove("active")
+                })
+                ele.classList.add("active")
+            })
+        })
+    }catch(e){
+
+    }
+}
+payouts()
