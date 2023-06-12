@@ -50,7 +50,7 @@
             <div class="columns is-rounded">
                 <div class="column is-5 has-text-centered is-rounded is-gradientY19">
                     <div class="has-text-centered text-centered-vertc">
-                        <h2 class="title is-size-3 has-text-white">مرحبا لك في المنصة!</h2>
+                        <h2 class="title is-size-3 has-text-white">مرحبا بك في المنصة!</h2>
                         <p class="is-size-5 has-text-white">افضل منصة عربية لتعلم الفيزياء لطلاب الثانوية العامة بطرق مبسطة ممتعة!</p>
                     </div>
                 </div>
@@ -62,57 +62,56 @@
                         <div class="field">
                             <label class="label has-text-grey">الاسم الكامل</label>
                             <div class="control has-icons-left">
-                                <input class="input" type="text" placeholder="ادخل اسمك الثلاثي">
+                                <input class="input" type="text" placeholder="ادخل اسمك الثلاثي" required>
                                 <span class="icon is-small is-left">
                                     <i class="fa-solid fa-signature"></i>
                                 </span>
                             </div>
                         </div>
-                          
-                        <div class="field">
-                            <label class="label has-text-grey">البريد الالكتروني</label>
-                            <div class="control has-icons-left">
-                                <input class="input" type="email" placeholder="ادخل البريد الالكتروني">
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-envelope"></i>
-                                </span>
+
+                        <div class="field" phonNumBox="">
+                            <label class="label has-text-grey">رقم الهاتف</label>
+                            <div class="field has-addons">
+                                <div class="control is-expanded has-icons-left">
+                                    <input class="input has-text-right" valPh="input" type="tel" placeholder="رقم الهاتف" required>
+                                    <span class="icon is-small is-left">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                </div>
                             </div>
+                            <div class="control shPhBtn" valPh="box">
+                                <button class="button is-light is-rounded is-gold is-smallNext" valPh="codeAsk">ارسال الرمز</button>
+                                <input class="input has-text-right is-none" valPh="codePlace" type="number" placeholder="الرمز" required>
+                            </div>
+                            <label class="help is-size-65 has-text-centered has-text-danger-dark"></label>
                         </div>
 
-                        <div class="field">
-                            <label class="label has-text-grey">رقم الهاتف</label>
-                            <div class="control has-icons-left">
-                                <input class="input has-text-right" type="tel" placeholder="رقم الهاتف">
-                                <span class="icon is-small is-left">
-                                    <i class="fa-solid fa-phone"></i>
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="field">
+                        <div class="field" phonNumBox="">
                             <label class="label has-text-grey">رقم هاتف ولي الامر1</label>
-                            <div class="control has-icons-left">
-                                <input class="input has-text-right" type="tel" placeholder="رقم هاتف ولي الامر 1">
+                            <div class="control is-expanded has-icons-left">
+                                <input class="input has-text-right phNum" type="tel" placeholder="رقم هاتف ولي الامر 1" required>
                                 <span class="icon is-small is-left">
                                     <i class="fa-solid fa-phone"></i>
                                 </span>
                             </div>
+                            <label class="help is-size-65 has-text-centered has-text-danger-dark"></label>
                         </div>
-                        
-                        <div class="field">
+
+                        <div class="field" phonNumBox="">
                             <label class="label has-text-grey">رقم هاتف ولي الامر 2</label>
-                            <div class="control has-icons-left">
-                                <input class="input has-text-right" type="tel" placeholder="رقم هاتف ولي الامر 2">
+                            <div class="control is-expanded has-icons-left">
+                                <input class="input has-text-right phNum" type="tel" placeholder="رقم هاتف ولي الامر 2" required>
                                 <span class="icon is-small is-left">
                                     <i class="fa-solid fa-phone"></i>
                                 </span>
                             </div>
+                            <label class="help is-size-65 has-text-centered has-text-danger-dark"></label>
                         </div>
                           
                         <div class="field">
                             <label class="label has-text-grey">كلمة المرور</label>
                             <div class="control has-icons-left">
-                                <input class="input" type="password" placeholder="ادخل كلمة المرور">
+                                <input class="input" type="password" placeholder="ادخل كلمة المرور" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-lock"></i>
                                 </span>
@@ -122,13 +121,77 @@
                         <div class="field">
                             <label class="label has-text-grey">اعادة كتابة كلمة المرور</label>
                             <div class="control has-icons-left">
-                                <input class="input" type="password" placeholder="اعادة كتابة كلمة المرور">
+                                <input class="input" type="password" placeholder="اعادة كتابة كلمة المرور" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-lock"></i>
                                 </span>
                             </div>
                         </div>
-                        <button class="button is-gold is-semilarge">انشاء حساب</button>
+
+                        <div class="field">
+                            <label class="label has-text-grey">السنة الدراسية</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select required>
+                                        <option value="2ndSecond">ثاني ثانوي</option>
+                                        <option value="3rdSecond">ثالث ثانوي</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label has-text-grey">المحافظة</label>
+                            <div class="control">
+                                <input class="input" type="text" list="governorates" placeholder="ابحث عن المحافظة">
+                                <datalist id="governorates" required>
+                                    <option value="cairo">القاهرة</option>
+                                    <option value="alexandria">الإسكندرية</option>
+                                    <option value="giza">الجيزة</option>
+                                    <option value="aswan">أسوان</option>
+                                    <option value="asyut">أسيوط</option>
+                                    <option value="beheira">البحيرة</option>
+                                    <option value="beni_suef">بني سويف</option>
+                                    <option value="port_said">بورسعيد</option>
+                                    <option value="damietta">دمياط</option>
+                                    <option value="sohag">سوهاج</option>
+                                    <option value="suez">السويس</option>
+                                    <option value="sharqia">الشرقية</option>
+                                    <option value="north_sinai">شمال سيناء</option>
+                                    <option value="south_sinai">جنوب سيناء</option>
+                                    <option value="gharbia">الغربية</option>
+                                    <option value="faiyum">الفيوم</option>
+                                    <option value="luxor">الأقصر</option>
+                                    <option value="matruh">مطروح</option>
+                                    <option value="minya">المنيا</option>
+                                    <option value="qalyubia">القليوبية</option>
+                                    <option value="qena">قنا</option>
+                                    <option value="kafr_el_sheikh">كفر الشيخ</option>
+                                    <option value="menofia">المنوفية</option>
+                                    <option value="assiut">أسيوط</option>
+                                    <option value="red_sea">البحر الأحمر</option>
+                                    <option value="new_valley">الوادي الجديد</option>
+                                    <option value="beni_suef">بني سويف</option>
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label has-text-grey">النوع</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select required>
+                                        <option value="male">ذكر</option>
+                                        <option value="female">انثى</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="is-flex is-align-items-center is-justify-content-space-between">
+                            <button class="button is-gold is-semilarge" id="submit">انشاء حساب</button>
+                            <a href="/login/" class="has-text-weight-semibold is-gold">لدي حساب <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
                     </form>
                 </div>
             </div>
