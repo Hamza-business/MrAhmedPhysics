@@ -31,6 +31,7 @@
     --greenLL: #e1ece4;
     
     --graySh: #f6f5f8;
+    --gray10: #fbfbfb;
     --gray20: #eaf7fb;
     --gray30: #f8fafb;
     --gray40: #e3e3e3;
@@ -103,14 +104,33 @@
     --purple80: #42354c;
     --purple90: #291f34; 
 
+    /* Purple Theme */
+    --grey10: #efefef;
+    --grey30: #9b999a;
+    --iPurple01: #eeecfe;
+    --iPurple05: #bab3ee;
+    --iPurple30: #6b7cfc;
+    --iPurple50: #596cfd;
+    --iPurple60: #5e63f9;
+    --iPurple70: #4349f8;
+    --iPurple80: #5d42f2;
+    --iPurple90: #5d42f1;
+    --iPurple100: #5339e8;
+    --iPurpleGradientTR: linear-gradient(to left, var(--iPurple60), var(--iPurple90));
+    --iPurpleGradientTR1: linear-gradient(to left, var(--iPurple30), var(--iPurple100));
+    --iPurpleGD: #20222e;
+    --iPurpleD: #171057;
+    --iPurpleD30: #194dbc;
 }
 .button.is-gold {
-    background-color: var(--gold);
+    /* background-color: var(--gold); */
+    background-color: var(--iPurple90);
     border-color: transparent;
     color: #fff
 }
 .button.is-gold.is-hovered, .button.is-gold:hover {
-    background-color: var(--yellow30);
+    /* background-color: var(--yellow30); */
+    background-color: var(--iPurple70);
     border-color: transparent;
     color: #fff
 }
@@ -119,10 +139,11 @@
     color: #fff
 }
 .button.is-gold.is-focused:not(:active), .button.is-gold:focus:not(:active) {
-    box-shadow: 0 0 0 .125em rgba(0, 209, 178, .25)
+    box-shadow: 0 0 0 .125em rgba(0, 45, 209, 0.25)
 }
 .button.is-gold.is-active, .button.is-gold:active {
-    background-color: var(--yellow40);
+    /* background-color: var(--yellow40); */
+    background-color: var(--iPurple80);
     border-color: transparent;
     color: #fff
 }
@@ -185,6 +206,13 @@ i{
 .is-size-65{
     font-size: 0.85rem !important;
 }
+.padded10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.has-text-purple-dark-darker{
+    color: var(--iPurpleD);
+}
 /* .columns {
     margin-top: 0;
     margin-bottom: 0 ;
@@ -232,18 +260,41 @@ button.navbar-item {
 }
 
 
-
+.navbar{
+    background-color: var(--grey10) !important;
+}
+a.navbar-item:hover {
+    background-color: #f9f9f9;
+    color: #485fc7;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 .navbar-menu .navbar-item.active{
-    background: var(--gradientY16);
+    background: var(--iPurpleGradientTR);
     border-radius: 6px;
     margin-bottom: 5px;
     margin-top: 5px;
     font-weight: 500;
     color: var(--whiteBg);
     transition: 0.5s margin;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.navbar-menu .navbar-item.active i{
+    color: var(--gray10) !important;
+}
+.navbar-end .navbar-item i:not(.fa-sun){
+    color: var(--grey50);
+}
+.fa-solid.fa-bell {
+    color: var(--redT) !important;
+}
+.fas.fa-user-circle {
+    color: #736f86 !important;
 }
 .navbar-menu .navbar-item.active:hover{
-    background: var(--gradientY19);
+    background: var(--iPurpleGradientTR);
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -254,7 +305,7 @@ button.navbar-item {
     color: var(--whiteBg) !important;
 }
 .navbar-item:hover *{
-    color: var(--yellow30);
+    color: var(--iPurple90);
 }
 .navbar-item i {
     padding-left: 5px;
@@ -277,13 +328,16 @@ button.navbar-item {
     display: none;
 }
 .fa-sun {
-    color: var(--yellow50)
+    color: var(--yellow10)
+}
+.fa-sun:hover, [mode]:hover .fa-sun{
+    color: var(--yellow10)
 }
 .fa-moon, [mode] .fa-moon{
-    color: var(--bLightbg);
+    color: var(--gray90);
 }
 .fa-moon:hover, [mode]:hover .fa-moon{
-    color: var(--lbDarkbg);
+    color: var(--gray50);
 }
 [mode].moon .fa-moon{
     display: block;
@@ -382,13 +436,14 @@ button.navbar-item {
 
 nav.mobileHeader{
     display: none !important;
-    background-color: var(--whiteBg) !important;
+    background-color: var(--graySh) !important;
     width: 100%;
-    padding: 0 10px;
+    padding: 1px 10px 0;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     overflow: hidden;
+    position: relative;
 }
 nav.mobileHeader .navbar-item {
     display: block;
@@ -396,30 +451,35 @@ nav.mobileHeader .navbar-item {
     padding: 0;
     width: calc(100% / 6);
     font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 nav.mobileHeader .navbar-item:hover {
     background-color: transparent;
 }
 nav.mobileHeader .navbar-item i {
     border-radius: 5px 5px 12px 12px;
-    width: 59px;
-    height: 53px;
+    width: 57px;
+    height: 48px;
     margin-top: 5px;
     text-align: center;
-    line-height: 50px;
-    color: var(--yellow60);
+    line-height: 48px;
+    color: var(--iPurple80);
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
     font-size: 23px;
 }
 nav.mobileHeader .navbar-item.active i {
-    background-image: var(--gradientY16D);
+    background-image: var(--iPurpleGradientTR1);
     color: var(--whiteBg);
-    height: 50px;
+    height: 48px;
     margin-bottom: 8px;
-    line-height: 48px;
+    line-height: 44px;
     margin-top: 0;
+}
+nav.mobileHeader .navbar-item.active .fas.fa-user-circle{
+    color: var(--graySh) !important;
 }
 nav.mobileHeader .navbar-item i.fa-moon {
     color: var(--bLightbg);
@@ -430,7 +490,7 @@ nav.mobileHeader .navbar-item i.fa-sun {
 
 
 hr {
-    background-image: var(--gradientY16);
+    background-image: var(--iPurpleGradientTR);
     height: 3px !important;
     margin: 1.25rem 0 !important;
     border-radius: 500px !important;
@@ -467,11 +527,11 @@ hr {
     margin-bottom: 8px !important;
 }
 .footer li a {
-    color: var(--yellow50);
+    color: var(--iPurple70);
     font-weight: 500;
 }
 .footer li a:hover {
-    color: var(--yellow90);
+    color: var(--iPurple90);
     font-weight: 500;
 }
 .footer li a i {
@@ -486,18 +546,18 @@ hr {
     margin-top: 15px;
 }
 a.name, p.name {
-    color: var(--yellow70);
+    color: var(--iPurple90);
     font-size: 16px;
     font-weight: 600; 
     transition: 0.3s color;
 }
 a.name:hover, p.name:hover {
-    color: var(--yellow50);
+    color: var(--iPurple50);
     font-size: 16px;
     font-weight: 600; 
 }
 footer.footer {
-    background: var(--gray40);
+    background: var(--grey10);
     padding: 2.45rem 1.5rem 1.2rem;
 }
 
@@ -508,19 +568,8 @@ footer.footer {
     .navbar .input.is-small.is-rounded {
         width: 160px;
     }
-    .responsivePadd.navbar-item{
-        padding-right: 0px;
-    }
 }
-@media screen and (max-width: 670px) { /* zeft */
-    .navbar-end{
-        margin-right: 0 !important;
-    }
-    .navbar-start{
-        margin-left: 4px !important;
-    }
-}
-@media (max-width: 660px) {
+@media (max-width: 580px) {
     .navbar{
         display: none !important;
     }
@@ -561,10 +610,10 @@ footer.footer {
     border-radius: 30px;
 }
 .column.is-gold{
-    background-color: var(--yellow20);
+    background-color: var(--iPurple60);
 }
 .column.is-gradientY19 {
-    background-image: var(--gradientY19);
+    background-image: var(--iPurpleGradientTR1);
 }
 .customized .column{
     padding-top: 50px;
@@ -579,7 +628,7 @@ input.input, .select select{
 
 
 .notiname{
-    color: var(--yellow50);
+    color: var(--gray90);
     font-weight: 500;
 }
 .notificate {
@@ -588,38 +637,45 @@ input.input, .select select{
     left: 10px;
     background: var(--gray30);
     border-radius: 0 0 5px 5px;
-    border: 1px solid var(--yellow50);
+    border: 2px solid var(--iPurple05);
     border-top: 0;
-    overflow-y: auto;
     height: 0;
     padding: 0;
     top: -1px;
     transition: 0.5s;
+    overflow-y: auto;
 
-
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+.notificate .notiBox{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 28px);
+    margin-bottom: 4px;
 }
 .notificate.active{
     height: calc(100vh - 100px);
-    padding: 0 0 16px 0;
+    padding: 0 0 8px 0;
     top: auto;
 }
 .notificate .notificationBox {
-    background-color: #ffffff7b;
-    border-bottom: 2px solid var(--yellow10);
+    background-color: #f5f5f579 !important;
     border-radius: 0 !important;
     padding: 12px;
     cursor: pointer;
     transition: 0.5s background-color;
+    margin-bottom: 5px;
+    transition: 0.5s transform, 0.5s background-color;
 }
 .notificate .notificationBox:hover{
-    background-color: var(--whiteBg);
+    background-color: #fbfbfba7 !important;
+    transform: scale(103%);
 }
 .notificate .notificationBox img{
-    border: 1px solid var(--yellow80);
+    border: 1px solid var(--iPurple60);
     border-radius: 5px;
 }
 @media (max-width: 420px) {
@@ -643,16 +699,16 @@ input.input, .select select{
 
 
 .is-gold-light{
-    color: var(--yellow50);
+    color: var(--iPurple60);
 }
 .is-gold-dark{
-    color: var(--yellow70);
+    color: var(--iPurpleD30);
 }
 a.is-gold, p.is-gold, span.is-gold, h1.is-gold{
-    color: var(--yellow60);
+    color: var(--iPurple90);
 }
 a.is-gold:hover, p.is-gold:hover, span.is-gold:hover{
-    color: var(--yellow90);
+    color: var(--iPurple60);
 }
 
 
@@ -703,7 +759,7 @@ input.is-none{
 
 
 .isPay{
-    border: 2px solid var(--yellow70);
+    border: 2px solid var(--iPurple30);
 }
 .isPay .isT{
     margin-bottom: 10px;
@@ -717,9 +773,9 @@ input.is-none{
     margin-left: 10px; 
 }
 .isPay .selectedShow {
-    background-color: var(--yellowTr);
+    background-color: var(--iPurple01);
     border-radius: 15px;
-    border: 2px dashed var(--yellow70);
+    border: 2px dashed transparent;
     margin-top: 10px;
     margin-bottom: 0 !important;
     cursor: pointer;
@@ -727,6 +783,7 @@ input.is-none{
     opacity: 0.8;
     transition: 0.5s;
     width: calc(100% - 2px);
+    padding: .35rem;
 }
 .isPay .selectedShow.active {
     border-bottom: none;
@@ -734,7 +791,7 @@ input.is-none{
 }
 .isPay .selectedShow:hover {
     opacity: 1;
-    border-color: var(--yellow90);
+    border-color: transparent;
 }
 .isPay .column.is-1.is-size-5 i {
     margin-top: 14px;
@@ -758,9 +815,9 @@ input.is-none{
     margin-bottom: 15px;
 }
 .pySection {
-    background-color: var(--yellowTr);
-    border-right: 2px dashed var(--yellow60);
-    border-left: 2px dashed var(--yellow60);
+    background-color: var(--iPurple01);
+    border-right: 2px dashed transparent;
+    border-left: 2px dashed transparent;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
     margin-left: 2px;
@@ -773,11 +830,12 @@ input.is-none{
 .pySection.active {
     padding-top: 10px !important;
     height: max-content;
-    border-bottom: 2px dashed var(--yellow40) !important;
+    border-bottom: 2px dashed transparent !important;
     border-radius: 0 0 15px 15px;
+    padding-bottom: 10px !important;
 }
 .pySection:hover {
-    border-color: #777777;
+    border-color: transparent;
 }
 .pySection div{
     opacity: 0.8;
@@ -788,16 +846,16 @@ input.is-none{
     opacity: 1;
 }
 .pySection .paywayo {
-    border-top: 1px solid var(--main-color) !important;
     padding: 10px 20px !important;
     border-radius: 15px !important;
+    margin-bottom: 5px;
 }
 .pySection .paywayo.active {
-    background-color: #f9da7ea3;
+    background-color: var(--gray10);
     opacity: 1;
 }
 .pySection .paywayo:hover {
-    background-color: #f9da7ea3;
+    background-color: var(--gray10);
 }
 .pySection .paywayo .img1W {
     -ms-transform: scale(2); 
@@ -836,14 +894,6 @@ input.is-none{
     position: relative
 }
 @media (max-width: 440px){
-    /* .Home_hero .buttons-cont {
-        margin-right: -20px;
-    }
-
-    .Home_hero .is-bg-red.is-rounded {
-        padding: 20px 27px !important;
-    } */
-    
     .Payways .hero-body{
         padding-left: 10px;
         padding-right: 1px;
