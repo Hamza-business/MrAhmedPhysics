@@ -645,6 +645,7 @@ input.input, .select select{
     border: 2px solid var(--iPurple05);
     border-top: 0;
     height: 0;
+    max-height: 0;
     padding: 0;
     top: -1px;
     transition: 0.5s;
@@ -654,17 +655,27 @@ input.input, .select select{
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
+    z-index: 1000;
+}
+.notificate.active{
+    height: fit-content;
+    max-height: calc(100vh - 100px);
+    padding: 0 0 8px 0;
+    top: auto;
+    transition: 0.5s;
 }
 .notificate .notiBox{
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100% - 28px);
+    max-height: 0;
+    height: 0;
     margin-bottom: 4px;
+    transition: 0.5s 0.5s;
 }
-.notificate.active{
-    height: calc(100vh - 100px);
-    padding: 0 0 8px 0;
-    top: auto;
+.notificate.active .notiBox{
+    height: 100%;
+    max-height: calc(100vh - 140px);
+    transition: 0.5s 0.5s;
 }
 .notificate .notificationBox {
     background-color: #f5f5f579 !important;
@@ -731,7 +742,7 @@ a.is-gold:hover, p.is-gold:hover, span.is-gold:hover{
     margin-left: 8px;
 }
 .is-light.is-gold{
-    background-color: var(--yellowTr) !important;
+    background-color: var(--iPurple03) !important;
 }
 .control .input {
     transition: 0.5s width;
@@ -756,7 +767,17 @@ input.input.verCode{
 input.is-none{
     display: none;
 }
-
+button.button[valPh="codeSubmit"]{
+    opacity: 0;
+    transition: 0.5s opacity;
+    display: none;
+    margin-right: 5px;
+    margin-left: 0px;
+    line-height: 0px;
+}
+button.button[valPh="codeSubmit"].active{
+    opacity: 1;
+}
 
 
 
@@ -967,4 +988,93 @@ input.is-none{
 }
 .is-boxe.today .notificBox a{
     color: var(--whiteBg);
+}
+
+
+
+
+
+
+
+
+
+
+.pops-conatainer {
+    position: fixed;
+    top: 50%;
+    z-index: 230;
+    display: none;
+    transform: translateY(-50%);
+}
+.notifications {
+    min-width: 320px;
+    max-width: 450px;
+    margin-right: -500px;
+}
+.notification.notifications.noti1.is-bg-red:hover, .panel-heading.is-bg-red:hover {
+    opacity: 1 !important;
+    background-color: var(--main-color) !important;
+}
+.noti1, .noti2, .noti3{
+    animation: NotiPop 10s !important;
+    animation-fill-mode: forwards !important;
+    animation-iteration-count: 1 !important;
+    font-weight: 500;
+}
+.notification.notifications.noti1 {
+    border: 2px solid #ff3333 !important;
+    color: #ff3333 !important;
+
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+.notification.notifications.noti2 {
+    border: 2px solid rgb(248, 170, 0) !important;
+    color: rgb(208, 142, 0) !important;
+
+    background: rgba(250, 250, 250, 0.5);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.notification.notifications.noti3 {
+    border: 2px solid var(--iPurple100) !important;
+    color: var(--iPurple100) !important;
+
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+@keyframes NotiPop {
+    0%{
+      margin-right: -500px;
+    }
+    15%{
+      margin-right: 10px;
+    }
+    90%{
+      opacity: 1;
+      margin-right: 10px;
+    }
+    100%{
+      margin-right: -500px;
+      opacity: 1;
+    }
+}
+.trans {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: #56577350;
+    z-index: -100;
+    position: fixed;
+    opacity: 0;
+    transition: 0.3s;
+}
+.trans.showNot{
+    z-index: 100;
+    opacity: 1;
 }

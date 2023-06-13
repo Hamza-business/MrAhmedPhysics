@@ -45,7 +45,7 @@ const valPhInput = document.querySelector("[valPh='input']");
 const valPhbox = document.querySelector("[valPh='box']");
 const valPhBtn = document.querySelector("[valPh='codeAsk']");
 const valPhcodePlc = document.querySelector("[valPh='codePlace']");
-
+const codeSubmit = document.querySelector('[valPh="codeSubmit"]');
 
 const resentTimer = function(ele){
     let countdown = 60;  
@@ -85,6 +85,27 @@ const varificationButton = function(){
     });
 }
 varificationButton()
+
+const checkCodeLen = function(){
+    valPhcodePlc?.addEventListener('input', ()=>{
+        if(valPhcodePlc.value.length == 6){
+            codeSubmit.style.display = "block";
+            setTimeout(() => {
+                codeSubmit.classList.add("active");
+            }, 0);
+        }
+        else{
+            codeSubmit.classList.remove("active");
+            setTimeout(() => {
+                codeSubmit.style.display = "none";
+            }, 500);
+        }
+    })
+}
+checkCodeLen()
+
+
+
 
 
 
@@ -132,23 +153,60 @@ function phoneCheck(phone, second, i) {
     }
 }
 
-phoneInputs[0]?.addEventListener('change', ()=>{
+phoneInputs[0]?.addEventListener('input', ()=>{
     studentPhoneCheck(phoneInputs[0]);
 })
-phoneInputs[1]?.addEventListener('change', ()=>{
+phoneInputs[1]?.addEventListener('input', ()=>{
     phoneCheck(phoneInputs[1], phoneInputs[2], 1);
 })
-phoneInputs[2]?.addEventListener('change', ()=>{
+phoneInputs[2]?.addEventListener('input', ()=>{
     phoneCheck(phoneInputs[2], phoneInputs[1], 2);
 })
 
 
+
+let passEqualtCheck = false
+const passwordInputs = [...document.querySelectorAll('[type="password"]')]
+passwordInputs.forEach((passInp, i)=>{
+    passInp?.addEventListener('change', ()=>{
+        let next = passwordInputs.at(i+1 - 2);
+        if(passInp.value != next.value){
+            passInp.closest(".field").querySelector(".help").textContent = "يجب توافق كلمة المرور";
+            next.closest(".field").querySelector(".help").textContent = "يجب توافق كلمة المرور";
+            passEqualtCheck = false;
+        }else{
+            passInp.closest(".field").querySelector(".help").textContent = "";
+            next.closest(".field").querySelector(".help").textContent = "";
+            passEqualtCheck = true;
+        }
+    })
+})
+
+
+
+
 document.getElementById("submit")?.addEventListener("click", function (event) {
-    if (!(chackState[0] && chackState[1] && chackState[2])) {
+    if (!(chackState[0] && chackState[1] && chackState[2] & passEqualtCheck)) {
         event.preventDefault()
         alert("يرجى ادخال البيانات المطلوبة بشكل صحيح")
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -191,3 +249,30 @@ function payouts(){
     }
 }
 payouts()
+
+
+
+
+
+
+
+
+
+
+
+function notificationPopShowHide(){
+    setTimeout(() => {
+        document.getElementById('pops-conatainer').style.display = 'block';
+        document.querySelector('.trans').classList.add("showNot");
+    }, 500);
+    document.onclick = function(){
+        document.querySelector('.trans').classList.remove("showNot");
+    }
+    setTimeout(() => {
+            document.getElementById('pops-conatainer').style.display = 'none';
+            document.querySelector('.trans').classList.remove("showNot");
+    }, 12000);
+}
+// notificationPopShowHide()
+
+
