@@ -73,6 +73,10 @@ const varificationButton = function(){
     valPhBtn?.addEventListener("click", (e)=>{
         e.preventDefault()
         valPhBtn.style.opacity = 0.3;
+        if(valPhBtn.getAttribute("disabled") != "true"){
+            valPhBtn.textContent = "اعادة الارسال 60";
+            resentTimer(valPhBtn)
+        }
         valPhBtn.setAttribute("disabled","true");
         valPhInput.setAttribute("disabled","true");
 
@@ -80,8 +84,6 @@ const varificationButton = function(){
         setTimeout(() => {
             valPhcodePlc.style.opacity = 1;
         }, 0);
-        valPhBtn.textContent = "اعادة الارسال 60"
-        resentTimer(valPhBtn)
     });
 }
 varificationButton()
@@ -98,7 +100,7 @@ const checkCodeLen = function(){
             codeSubmit.classList.remove("active");
             setTimeout(() => {
                 codeSubmit.style.display = "none";
-            }, 500);
+            }, 0);
         }
     })
 }
