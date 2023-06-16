@@ -202,23 +202,6 @@ document.getElementById("submit")?.addEventListener("click", function (event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function payWayShow(){
     let clicko = document.getElementById("selectedShow");
     clicko.classList.toggle("active");
@@ -260,8 +243,6 @@ payouts()
 
 
 
-
-
 function notificationPopShowHide(){
     setTimeout(() => {
         document.getElementById('pops-conatainer').style.display = 'block';
@@ -277,4 +258,15 @@ function notificationPopShowHide(){
 }
 // notificationPopShowHide()
 
+
+
+
+
+
+// const alistParent = document.querySelectorAll(".alistParent");
+// alistParent.forEach((ele)=>{
+//     ele?.addEventListener('click', ()=>{
+//         ele.parentElement.classList.toggle("active");
+//     })
+// })
 

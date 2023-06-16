@@ -161,6 +161,17 @@
     border-color: transparent;
     color: #fff
 }
+.button.is-gold.is-outlined {
+    background-color: var(--gray30);
+    border-color: var(--iPurple90);
+    color: var(--iPurple100);
+    transition: 0.5s background-color, 0.5s color;
+}
+.button.is-gold.is-outlined:hover {
+    background-color: var(--iPurple90);
+    border-color: var(--iPurple90);
+    color: var(--gray30)
+}
 
 
 .button.is-dr{
@@ -1063,6 +1074,51 @@ input.is-none{
 
 
 
+.section.joinPf.noPaddBtm {
+    padding-bottom: 10px;
+}
+.imgContBoxer2nd{
+    /* border-radius: 64% 36% 49% 51% / 31% 18% 82% 69% ; */
+    border-radius: 81% 19% 48% 52% / 57% 17% 83% 43% ;
+    background-image: linear-gradient(to bottom right, var(--iPurple01), var(--iPurple09));
+    padding: 25px;
+}
+@media (max-width: 765px){
+    .imgContBoxer2nd{
+        margin-left: 130px;
+        margin-right: 130px;
+    }
+}
+@media (max-width: 680px){
+    .imgContBoxer2nd{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media (max-width: 580px){
+    .imgContBoxer2nd{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+@media (max-width: 520px){
+    .imgContBoxer2nd{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+@media (max-width: 450px){
+    .imgContBoxer2nd{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 400px){
+    .imgContBoxer2nd{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
 
 
 
@@ -1158,6 +1214,7 @@ input.is-none{
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
+
 @media (max-width: 780px){
     .paddinged{
         padding-left: 50px !important;
@@ -1170,6 +1227,42 @@ input.is-none{
         padding-right: 10px !important;
     }
 }
+.textsLine {
+    line-height: 2.1;
+}
+.notitle {
+    margin-bottom: 10px;
+}
+.dotile {
+    margin-bottom: -5px;
+}
+.leftBara{
+    border-right: 1px solid var(--bLightbg);
+    padding: 10px 20px 10px 0;
+    margin-bottom: 5px;
+}
+.rightBara{
+    border-left: 1px solid var(--bLightbg);
+    padding: 10px 0 10px 20px;
+    margin-bottom: 5px;
+}
+@media (max-width: 600px){
+    .willbeDown {
+        flex-direction: column;
+    }
+    .leftBara{
+        border-right: none;
+        padding: 10px 0px 10px 0;
+        margin-bottom: 10px;
+    }
+    .rightBara{
+        border-left: none;
+        padding: 0px 0 10px 0px;
+        margin-bottom: 0px;
+    }
+}
+
+
 
 
 
@@ -1264,18 +1357,18 @@ input.is-none{
     perspective: 800px;
 }
 .leftTransf .tree{
-    transform: rotateY(20deg) !important;
+    transform: rotateY(10deg) !important;
     box-shadow: 0px 0px 5px 1px var(--iPurple80);
 }
 .rightTransf .tree{
-    transform: rotateY(-20deg) !important;
+    transform: rotateY(-10deg) !important;
     box-shadow: 0px 0px 5px 1px var(--iPurple80);
 }
 .tree:hover {
-    transform: scale(108%) !important;
+    transform: scale(104%) !important;
 }
 .rightTransf .tree:hover, .leftTransf .tree:hover {
-    transform: scale(108%) !important;
+    transform: scale(104%) !important;
 }
 @media (max-width: 700px){
     .leftTransf .tree{
@@ -1289,7 +1382,7 @@ input.is-none{
 .subscripteP{
     padding: 20px;
     background-image: var(--iPurpleGradientTR1D2);
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
@@ -1360,4 +1453,79 @@ input.is-none{
     bottom: 0;
     animation: morph 6s linear infinite alternate,spin 20s linear infinite reverse;
     transform-origin: 20% 20%;
+}
+
+.columns.marginded{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+.filter {
+    height: fit-content;
+    border-radius: 10px !important;
+}
+.menu {
+    padding: 15px;
+    background: var(--iPurple80);
+    border-radius: 10px !important;
+}
+.alist{
+    margin-bottom: 16px;
+}
+.alistParent{
+    padding: 6px 10px;
+    background-color: var(--gray40);
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+.alistChilds{
+    border-right: 2px solid var(--bLightbg);
+    margin-right: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-right: 5px;
+    color: var(--gray20);
+    font-weight: 500;
+}
+.alistChild{
+    padding: 5px;
+    margin-bottom: 5px;
+    display: none;
+}
+.alist.active .alistChild{
+    display: block;
+}
+.alist .angle{
+    transition: 0.5s transform;
+}
+.alist.active .angle{
+    transform: rotate(-90deg);
+}
+
+.lectsGridParent{
+    margin-bottom: 30px !important;
+}
+.card-content {
+    padding: 0.75rem !important;
+}
+.card .button{
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.card .button i{
+    padding-left: 5px;
+}
+.is-paddingbtm0{
+    padding-bottom: 0 !important;
 }
