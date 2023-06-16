@@ -13,10 +13,10 @@ const pageTitle = document.querySelector('#pageTitle');
 function currentPage(current) {
     let elements = [...document.querySelectorAll(`[whtpg="${current}"]`)];
     for (i of elements) {
-        i.classList.add("active")
+        i?.classList.add("active")
     }
 }
-currentPage(pageTitle.textContent)
+currentPage(pageTitle?.textContent)
 
 
 const modeChange = document.querySelectorAll("[mode]");
@@ -269,4 +269,14 @@ function notificationPopShowHide(){
 //         ele.parentElement.classList.toggle("active");
 //     })
 // })
+
+
+
+
+
+
+
+
+
+
 
