@@ -356,6 +356,12 @@ a.navbar-item:hover {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+.navbar-item img {
+    max-height: 2.75rem !important;
+}
+a.navbar-item.logo {
+    padding: 0 10px !important;
+}
 .navbar-menu .navbar-item.active{
     background: var(--iPurpleGradientTR);
     border-radius: 6px;
@@ -1534,4 +1540,64 @@ input.is-none{
 }
 .isdate{
     padding-left: 5px;
+}
+.lectsGridParent .column .card {
+    border-radius: 15px !important;
+}
+
+
+
+
+
+.error{
+    background-image: url('/assets/images/vects/error.svg'), linear-gradient(to bottom right, var(--iPurple01), var(--iPurple05)) !important;
+    min-height: calc(100vh - 50px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 20px 30px 1000px 80px var(--bLightbg) inset;
+}
+.f1{
+    font-size: 180px;
+}
+.f2{
+    font-size: 160px;
+}
+.is-size-01{
+    font-size: 120px !important;
+}
+.deg5{
+    position: absolute;
+    top: 0;
+    left: calc(50% - 52px);
+    transform: rotate(40deg) !important;
+}
+.e {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 135px);
+    transform: rotate(-15deg) !important;
+    margin-right: 20px;
+}
+.d {
+    margin-left: 125px;
+}
+.is-size-03{
+    position: relative;
+    font-size: 100px !important;
+}
+.error h1{
+    margin-bottom: 0px !important;
+}
+.error h2{
+    margin-top: 0px;
+    color: var(--iPurple90);
+}
+.error h3{
+    color: var(--whiteBg) !important;
+    font-size: 20px;
+}
+.error .button{
+    font-weight: 500;
+    font-size: 18px;
 }
