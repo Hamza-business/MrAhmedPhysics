@@ -9,6 +9,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/bulma-rtl.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='/assets/style/all.min.css'>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div style="display: none" id="pageTitle">home</div>
@@ -184,53 +186,141 @@
     
 
     <div class="contentBox">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
 
-    <!-- 
-                  <div class="navbar-start">
-                <div class="navbar-item responsivePadd">
-                    <div class="field has-addons">
-                        <div class="control">
-                            <button class="button is-small is-gold is-rounded" id="searchbtn">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                            <input class="input is-small is-rounded" type="text" placeholder="ابحث عن محاضرة">
+        <div class="heroCont" id="hero">
+            <div class="section">
+                <div class="columns">
+                    <div class="column is-7">
+                        <div class="text-centered-vertcJust">
+                            <h1 class="title is-size-1 has-text-grey-lighter has-text-centered">منصة ابوعرب</h1>
+                            <p class="is-size-5 has-text-white">منصة تعليمية لشرح مادة الفيزياء لطلاب الثانوية العامة والأزهرية، بنحاول نكون معاك خطوة بخطوة للوصول لأفضل النتائج.</p>
+                            <a href="#explore" class="button is-dr shadowed is-outlined is-semilarge margin">تصفح المنصة!</a>
+                        </div>
+                    </div>
+                    <div class="column is-5 paddinged">
+                        <div class="imgContBoxer">
+                            <embed src="/assets/images/vects/svgPersonInfinit.svg" type="image/svg+xml" />
                         </div>
                     </div>
                 </div>
             </div>
-     --> 
+        </div>
+
+        <section class="features home section" id="explore">
+            <div class="container block trees">
+                <h2 class="title is-3 has-text-grey-dark has-text-centered">منصة ابو عرب <span class="is-gold">تقدم</span></h2>
+                <div class="columns">
+                    <div class="column is-4 rightTransf">
+                        <div class="tree" data-aos="zoom-out" data-aos-once="true">
+                            <div class="is-flex is-justify-content-space-evenly is-align-items-center">
+                                <div class="iconCont has-text-primary"><i class="fa-solid fa-person-chalkboard"></i></div>
+                                <h3 class="title is-5 has-text-weight-medium">شرح بطريقة مبسطة</h3>
+                            </div>
+                        </div>
+        
+                        <div class="tree" data-aos="zoom-out" data-aos-once="true">
+                            <div class="is-flex is-justify-content-space-evenly is-align-items-center">
+                                <div class="iconCont has-text-link-light"><i class="fa-regular fa-file-lines"></i></div>
+                                <h3 class="title is-5 has-text-weight-medium">حل بطرق متعدده</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-4">
+                        <div class="tree" data-aos="zoom-out" data-aos-once="true">
+                            <div class="is-flex is-justify-content-space-evenly is-align-items-center">
+                                <div class="iconCont has-text-info"><i class="fa-solid fa-vial"></i></div>
+                                <h3 class="title is-5 has-text-weight-medium">كويزات واختبارات متتالية</h3>
+                            </div>
+                        </div>
+        
+                        <div class="tree" data-aos="zoom-out" data-aos-once="true">
+                            <div class="is-flex is-justify-content-space-evenly is-align-items-center">
+                                <div class="iconCont has-text-primary"><i class="fa-solid fa-users-viewfinder"></i></div>
+                                <h3 class="title is-5 has-text-weight-medium">مدرسين للرد على الأسئلة</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-4 leftTransf">
+                        <div class="tree" data-aos="zoom-out" data-aos-once="true">
+                            <div class="is-flex is-justify-content-space-evenly is-align-items-center">
+                                <div class="iconCont has-text-danger"><i class="fa-solid fa-people-group"></i></div>
+                                <h3 class="title is-5 has-text-weight-medium">مسئولين للمتابعة الدورية</h3>
+                            </div>
+                        </div>
+
+                        <div class="tree" data-aos="zoom-out" data-aos-once="true">
+                            <div class="is-flex is-justify-content-space-evenly is-align-items-center">
+                                <div class="iconCont has-text-warning"><i class="fa-solid fa-headset"></i></div>
+                                <h3 class="title is-5 has-text-weight-medium">مسئولين للدعم الفني</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="aboutUs">
+            <div class="section">
+                <div class="columns">
+                    <div class="column is-3">
+                        <div class="img is-rounded">
+                            <img src="/assets/images/mr.jpg" class="img is-rounded50"/>
+                        </div>
+                    </div>
+                    <div class="column is-9">
+                        <div class="text-centered-vertcJust has-text-centered">
+                            <h2 class="title is-size-1 has-text-grey-lighter">م. أحمد أبو عرب</h2>
+                            <p class="is-size-5 has-text-white">خريج هندسة اسكندرية عمل كمحاضر لمادة الفيزياء لطلاب الثانوية العامة والأزهرية لعدة أعوام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section joinPf noPaddBtm">
+            <div class="columns marginded subscripteP">
+                <div class="column is-8">
+                    <div class="text-centered-vertcJust">
+                        <div class="is-flex is-justify-content-center willbeDown">
+                            <div class="rightBara">
+                                <h2 class=" is-size-4 has-text-grey-lighter has-text-centered has-text-weight-medium">شعارنا</h2>
+                                <p class="title has-text-centered has-text-white is-size-4 has-text-weight-semibold">"اصبروا وصابروا"</p>
+                            </div>
+                            <div class="leftBara">
+                                <h2 class=" is-size-4 has-text-grey-lighter has-text-centered has-text-weight-medium">هدفنا</h2>
+                                <p class="title has-text-centered has-text-white is-size-4 has-text-weight-semibold">"تفوق وليس مجرد نجاح"</p>
+                            </div>
+                        </div>
+                        <p class="is-size-55 has-text-white textsLine">
+                            انت عارف ان المحتوي الموجود علي المنصة ليس محتوي ترفيهي وإنما هو محتوي تعليمي والعلم يحتاج الي التعب والمشقة للحصول علي لذة الوصول. لكن ربنا يعلم اننا بنحاول يكون المحتوي ممتع قدر الإمكان، من الأخر انت داخل علي مدعكة تتكون من خليط من الملل والفكاهة والسعادة والحزن
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="imgContBoxer2nd">
+                        <embed src="/assets/images/vects/jump.svg" type="image/svg+xml" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section joinPf">
+            <div class="subscripteP is-flex is-justify-content-space-between is-align-items-center">
+                <p class="is-size-4 has-text-weight-semibold has-text-white">انضم الى المنصة وابدأ بالتعلم الان</p>
+                <a class="button is-dr lrg" href="/login/">انضم الان</a>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="columns">
             <div class="column is-6">
                 <div class="is-flex is-align-items-center columner">
-                    <img src="/assets/images/logos/Vector-Presenting-to-smart-board.png">
-                    <p class="has-text-right has-text-weight-medium">
-                    منصة مستر احمد ابو عرب هي المنصة الانسب لتعلم الفيزياء.
-                    تقدم المنصة دورات تعليمية قوية باشراف مستر احمد ابو عرب.
-                    </p>
+                    <img src="/assets/images/logos/logo.png">
+                    <p class="has-text-right has-text-weight-medium">منصة م. احمد ابو عرب في مادة الفيزياء للثانوية العامة والأزهرية، هي المنصة الأنسب التي تقدم شرح مبسط ومتابعة دورية واختبارات متتالية علي مدار العام.</p>
                 </div>
             </div>
 
@@ -270,3 +360,24 @@
 </body>
 </html>
 <script src='/assets/js/main.js'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    let prevScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    let hero = document.getElementById("hero");
+    let scrollStart = 60;
+
+    window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScrollPos > scrollStart) {
+            let opacity = 1 - (currentScrollPos - scrollStart) / (hero.offsetHeight * 1);
+            hero.style.opacity = opacity > 0.75 ? opacity : 0.75;
+        } else {
+            hero.style.opacity = "1";
+        }
+        prevScrollPos = currentScrollPos;
+    };
+</script>
