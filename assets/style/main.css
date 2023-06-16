@@ -1529,3 +1529,9 @@ input.is-none{
 .is-paddingbtm0{
     padding-bottom: 0 !important;
 }
+.istime{
+    padding-left: 10px;
+}
+.isdate{
+    padding-left: 5px;
+}
