@@ -173,6 +173,20 @@
     color: var(--gray30)
 }
 
+.file.is-prpl .file-cta{
+    background: var(--gradientPurpleLD2) !important;
+    color: var(--gray30) !important;
+    justify-content: center;
+}
+.file.is-prpl .file-label:first-child {
+    width: 100%;
+    border: 2px dashed var(--iPurple80);
+    border-radius: 15px;
+}
+.imageBoxer{
+    padding: 10px;
+}
+
 
 .button.is-dr{
     background-color: var(--iPurpleGD);
@@ -2003,6 +2017,12 @@ input.is-none{
     max-width: 100% !important;
     display: block;
     height: max-content !important;
+  }
+
+  .file-label img {
+    width: auto;
+    height: fit-content;
+    max-width: -moz-available;
   }
 
   .save-button {

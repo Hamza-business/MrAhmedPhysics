@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+
+<head>
+    <title>لوحة التحكم | الادارة</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#8e44ad">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <!-- assets -->
+    <link rel='stylesheet' href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet' href='/assets/style/main.css'>
+    <link rel="stylesheet" href="/assets/style/all.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bulma.min.css" />
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar menu">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <a href="#" class="is-actives"><i class="fas fa-home"></i>الرئيسية</a>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-chalkboard"></i>المحاضرات<i class="fas fa-angle-left angle"></i></a>
+                <div class="sub-menu">
+                    <a href="new-lecture/" class="sub-item">محاضرة جديدة</a>
+                    <a href="all-lecture/" class="sub-item">جميع المحاضرات</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="all-quiz/" class="sub-item"><i class="fas fa-file"></i>جميع الاختبارات</a>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-pallet"></i>الطلبات<i class="fas fa-angle-left angle"></i></a>
+                <div class="sub-menu">
+                    <div class="item SubItem">
+                        <a class="sub-btn"><i class="fas fa-question"></i>الاسئلة<i
+                                class="fas fa-angle-left angle"></i></a>
+                        <div class="sub-menu">
+                            <a href="QRemain/" class="sub-item">الأسئلة المتبقية</a>
+                            <a href="AllQS/" class="sub-item">جميع الاسئلة</a>
+                        </div>
+                    </div>
+                    <div class="item SubItem">
+                        <a class="sub-btn"><i class="fas fa-headset"></i>الدعم الفني<i
+                                class="fas fa-angle-left angle"></i></a>
+                        <div class="sub-menu">
+                            <a href="Supp-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                            <a href="All-SuppRemain/" class="sub-item">جميع الاسئلة</a>
+                        </div>
+                    </div>
+                    <div class="item SubItem">
+                        <a class="sub-btn"><i class="fas fa-charging-station"></i>شحن الرصيد<i
+                                class="fas fa-angle-left angle"></i></a>
+                        <div class="sub-menu">
+                            <a href="Charge-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                            <a href="All-Charge/" class="sub-item">جميع الطلبات</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="main">
+        <p class="subtitle is-3">محاضرة جديده</p>
+        <form>
+            <div class="field">
+                <label class="label">اسم المحاضرة</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="ادخل اسم المحاضرة">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">وصف المحاضرة</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="ادخل وصف المحاضرة"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">الصف</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>2 ثانوي</option>
+                      <option>3 ثانوي</option>
+                    </select>
+                  </div>
+                </div>
+            </div>              
+
+            <div class="field">
+                <label class="label">صورة المحاضرة</label>
+                <div class="file has-name is-prpl">
+                    <label class="file-label is-flex is-flex-direction-column">
+                        <input class="file-input" type="file" onchange="viewImage(this, 'lectureBanner')" accept="image/*">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">اختر ملف...</span>
+                        </span>
+                        <div class="has-text-centered imageBoxer">
+                            <img src="" alt="">
+                        </div>
+                        <span class="file-name"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">بانر المحاضرة</label>
+                <div class="file has-name is-prpl">
+                    <label class="file-label is-flex is-flex-direction-column">
+                        <input class="file-input" type="file" onchange="viewImage(this, 'lectureBanner')" accept="image/*">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">اختر ملف...</span>
+                        </span>
+                        <div class="has-text-centered imageBoxer">
+                            <img src="" alt="">
+                        </div>
+                        <span class="file-name"></span>
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-gold is-semilarge" type="submit">ارسال</button>
+                </div>
+                <div class="control">
+                    <button class="button is-danger">إلغاء</button>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+</body>
+
+</html>
+
+<script src="/assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<script>
+    $(document).ready(function () {
+        $('.sub-btn')?.click(function () {
+            $(this).next('.sub-menu').slideToggle();
+            $(this).parent().toggleClass('active')
+        });
+
+        $('.menu-btn')?.click(function () {
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+        });
+
+        $('.close-btn')?.click(function () {
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+        });
+    });
+</script>
+<script>
+    function viewImage(input, imageId) {
+        const file = input.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const image = input.parentNode.querySelector('img');
+            image.src = e.target.result;
+        }
+
+        reader.readAsDataURL(file);
+
+        const fileName = input.files[0].name;
+        const fileNameSpan = input.parentNode.parentNode.querySelector('.file-name');
+        fileNameSpan.textContent = fileName;
+    }
+</script>
