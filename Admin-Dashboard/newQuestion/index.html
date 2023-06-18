@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="HTML">
+
+<head>
+    <title>لوحة التحكم | الادارة</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#8e44ad">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <!-- assets -->
+    <link rel='stylesheet' href='/assets/style/bulma-rtl.min.css'>
+    <link rel='stylesheet' href='/assets/style/main.css'>
+    <link rel="stylesheet" href="/assets/style/all.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bulma.min.css" />
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar menu">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <a href="#" class="is-actives"><i class="fas fa-home"></i>الرئيسية</a>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-chalkboard"></i>المحاضرات<i class="fas fa-angle-left angle"></i></a>
+                <div class="sub-menu">
+                    <a href="new-lecture/" class="sub-item">محاضرة جديدة</a>
+                    <a href="all-lecture/" class="sub-item">جميع المحاضرات</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="all-quiz/" class="sub-item"><i class="fas fa-file"></i>جميع الاختبارات</a>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-pallet"></i>الطلبات<i class="fas fa-angle-left angle"></i></a>
+                <div class="sub-menu">
+                    <div class="item SubItem">
+                        <a class="sub-btn"><i class="fas fa-question"></i>الاسئلة<i
+                                class="fas fa-angle-left angle"></i></a>
+                        <div class="sub-menu">
+                            <a href="QRemain/" class="sub-item">الأسئلة المتبقية</a>
+                            <a href="AllQS/" class="sub-item">جميع الاسئلة</a>
+                        </div>
+                    </div>
+                    <div class="item SubItem">
+                        <a class="sub-btn"><i class="fas fa-headset"></i>الدعم الفني<i
+                                class="fas fa-angle-left angle"></i></a>
+                        <div class="sub-menu">
+                            <a href="Supp-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                            <a href="All-SuppRemain/" class="sub-item">جميع الاسئلة</a>
+                        </div>
+                    </div>
+                    <div class="item SubItem">
+                        <a class="sub-btn"><i class="fas fa-charging-station"></i>شحن الرصيد<i
+                                class="fas fa-angle-left angle"></i></a>
+                        <div class="sub-menu">
+                            <a href="Charge-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                            <a href="All-Charge/" class="sub-item">جميع الطلبات</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="main">
+        <p class="subtitle is-3">سؤال جديد</p>
+        <div class="stData">
+            <form>
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" id="imageInputCheck">
+                            يحتوي السؤال على صورة؟
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">اسم السؤال</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="أدخل اسم السؤال">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">درجة السؤال</label>
+                    <div class="control">
+                        <input class="input" type="number" placeholder="أدخل درجة السؤال">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">اسم الدرس</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="أدخل اسم الدرس">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">السؤال</label>
+                    <div class="control">
+                        <textarea id="markupTextarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">رسالة صوتيه</label>
+                    <div class="control">
+                        <button id="recordButton" class="button is-gold">تسجيل الصوت</button>
+                        <button id="stopButton" class="button is-danger is-hidden">إيقاف</button>
+                        <audio id="audioPlayer" src="" controls class="is-hidden"></audio>
+                    </div>
+                </div>
+
+                <div class="field" id="imageInput" style="display: none;">
+                    <label class="label">صورة السؤال</label>
+                    <div class="file has-name is-prpl">
+                        <label class="file-label is-flex is-flex-direction-column">
+                            <input class="file-input" type="file" onchange="viewImage(this, 'lectureBanner')"
+                                accept="image/*">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">اختر ملف...</span>
+                            </span>
+                            <div class="has-text-centered imageBoxer">
+                                <img src="" alt="">
+                            </div>
+                            <span class="file-name"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">الاجوبة (قم باختيار الجوب الصحيح)</label>
+                    <div id="additionalRadios" class="field">
+                        <div class="control is-flex is-align-items-center">
+                            <label class="radio">
+                                <input type="radio" name="radioGroup">
+                            </label>
+                            <input type="text" class="input" placeholder="الجواب 1">
+                        </div>
+
+                        <div class="control is-flex is-align-items-center">
+                            <label class="radio">
+                                <input type="radio" name="radioGroup">
+                            </label>
+                            <input type="text" class="input" placeholder="الجواب 2">
+                        </div>
+
+                        <div class="control is-flex is-align-items-center">
+                            <label class="radio">
+                                <input type="radio" name="radioGroup">
+                            </label>
+                            <input type="text" class="input" placeholder="الجواب 3">
+                        </div>
+                    </div>
+                    <button id="addRadioBtn" class="button is-gold">اضافة سؤال</button>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-gold is-semilarge">إرسال</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-danger">إلغاء</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+<script src="/assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- side bar show hide -->
+<script>
+    $(document).ready(function () {
+        $('.sub-btn')?.click(function () {
+            $(this).next('.sub-menu').slideToggle();
+            $(this).parent().toggleClass('active')
+        });
+
+        $('.menu-btn')?.click(function () {
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+        });
+
+        $('.close-btn')?.click(function () {
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+        });
+    });
+</script>
+
+<!-- function to insert textarea -->
+<script>
+    tinymce.init({
+        selector: '#markupTextarea',
+        plugins: 'advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount',
+        toolbar: 'undo redo | formatselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | removeformat | help'
+    });
+</script>
+
+<!-- function will show the image file input after checking the check box -->
+<script>
+    $(document).ready(function () {
+        $('#imageInputCheck').change(function () {
+            if ($(this).is(':checked')) {
+                $('#imageInput').show();
+            } else {
+                $('#imageInput').hide();
+            }
+        });
+    });
+</script>
+
+<!-- Function to getbimage and show it in the imagebox -->
+<script>
+    function viewImage(input, imageId) {
+        const file = input.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const image = input.parentNode.querySelector('img');
+            image.src = e.target.result;
+        }
+
+        reader.readAsDataURL(file);
+
+        const fileName = input.files[0].name;
+        const fileNameSpan = input.parentNode.parentNode.querySelector('.file-name');
+        fileNameSpan.textContent = fileName;
+    }
+</script>
+
+<!-- Record and create blob -->
+<script>
+    const recordButton = document.getElementById('recordButton');
+    const stopButton = document.getElementById('stopButton');
+    const audioPlayer = document.getElementById('audioPlayer');
+    let mediaRecorder = null;
+    let chunks = [];
+    const getMicrophoneReady = function (fn) {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+
+                    mediaRecorder.ondataavailable = (e) => {
+                        chunks = [e.data];
+                    }
+
+                    mediaRecorder.onstop = () => {
+                        let audioFile = new Blob(chunks, { 'type': 'audio/mp3; codecs=opus' });
+                        audioURL = URL.createObjectURL(audioFile);
+                        audioPlayer.src = audioURL;
+                    }
+                    fn()
+                })
+                .catch(err => {
+                    window.open('/learn', '_self')
+                    // Error msg
+                })
+        }
+    }
+    const record = () => {
+
+        mediaRecorder.start();
+    }
+    const stop = () => {
+        mediaRecorder.stop()
+    }
+
+    recordButton?.addEventListener('click', (e) => {
+        e.preventDefault();
+        getMicrophoneReady(record);
+        recordButton?.classList.add('is-hidden');
+        audioPlayer?.classList.add('is-hidden');
+        stopButton?.classList.remove('is-hidden');
+    })
+    stopButton?.addEventListener('click', (e) => {
+        e.preventDefault()
+        stop();
+        recordButton?.classList.remove('is-hidden');
+        audioPlayer?.classList.remove('is-hidden');
+        stopButton?.classList.add('is-hidden');
+    })
+</script>
+
+
+<script>
+    const addRadioBtn = document.getElementById('addRadioBtn');
+    const additionalRadios = document.getElementById('additionalRadios');
+
+    function addRadioInput() {
+        const radioWrapper = document.createElement('div');
+        radioWrapper.className = 'control is-flex is-align-items-center';
+
+        const radioLabel = document.createElement('label');
+        radioLabel.className = 'radio';
+
+        const radioInput = document.createElement('input');
+        radioInput.type = 'radio';
+        radioInput.name = 'radioGroup';
+
+        const radioText = document.createElement('input');
+        radioText.type = 'text';
+        radioText.className = 'input';
+
+        radioLabel.appendChild(radioInput);
+        radioWrapper.appendChild(radioLabel);
+        radioWrapper.appendChild(radioText);
+
+        additionalRadios.appendChild(radioWrapper);
+
+    }
+
+    addRadioBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        addRadioInput()
+    });
+</script>

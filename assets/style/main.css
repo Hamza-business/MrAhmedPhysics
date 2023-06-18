@@ -1762,7 +1762,19 @@ input.is-none{
 
 
 
-
+.stData .field + .field{
+    margin-top: 30px !important;
+}
+.stData .field .control + .control{
+    margin-top: 10px !important;
+}
+input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+.radio + .input{
+    margin-right: 10px;
+}
 
 
 
@@ -2041,6 +2053,8 @@ input.is-none{
 }
 .stData{
     margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .tableCont{
     margin-top: 40px;
