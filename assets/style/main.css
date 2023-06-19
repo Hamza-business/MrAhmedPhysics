@@ -1070,7 +1070,7 @@ input.is-none{
     cursor: pointer;
     transition: 0.5s transform;
 }
-.notiBox {
+.notificBox .notiBox {
     position: absolute;
     top: 0;
 }
