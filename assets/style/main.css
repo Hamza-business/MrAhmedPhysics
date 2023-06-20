@@ -1775,8 +1775,13 @@ input[type="radio"] {
 .radio + .input{
     margin-right: 10px;
 }
-
-
+.input {
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+.control {
+    z-index: 100;
+}
 
 
 
