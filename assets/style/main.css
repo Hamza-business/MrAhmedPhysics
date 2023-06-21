@@ -136,6 +136,9 @@
     --logogold60: #f7941d; 
     
 }
+.button{
+    border-radius: 25px !important;
+}
 .button.is-gold {
     /* background-color: var(--gold); */
     background-color: var(--iPurple90);
@@ -230,8 +233,16 @@
 }
 
 
-
-
+.outlineDown::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid var(--iPurple80);
+    width: 80px;
+    margin-top: 8px;
+}
+.untabled td{
+    padding-bottom: 5px !important;
+}
 
 
 
@@ -283,7 +294,7 @@ i{
     padding: 0px;
 }
 .list {
-    padding-left: 18px;
+    padding-right: 18px;
 }
 .list li{
     list-style:decimal !important;
@@ -292,9 +303,9 @@ i{
     padding-top: 4px;
 }
 .input::placeholder {
-    color: var(--iPurpleGD) !important;
+    color: var(--bDarkbg) !important;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .has-t{
     margin-top: 15px;
@@ -720,10 +731,13 @@ footer.footer {
 
 
 
-
-.section.customized {
-    padding: 3rem 2rem !important;
+.section {
+    padding: 4.2rem;
+      padding-bottom: 4.2rem;
 }
+/* .section.customized {
+    padding: 4rem 4rem !important;
+} */
 .section.customized .columns.is-rounded{
     background-color: var(--graySh);
     border-radius: 30px;
@@ -908,6 +922,7 @@ input.is-none{
 
 .isPay{
     border: 2px solid var(--iPurple30);
+    border-radius: 25px !important;
 }
 .isPay .isT{
     margin-bottom: 10px;
@@ -922,7 +937,7 @@ input.is-none{
 }
 .isPay .selectedShow {
     background-color: var(--iPurple01);
-    border-radius: 15px;
+    border-radius: 25px;
     border: 2px dashed transparent;
     margin-top: 10px;
     margin-bottom: 0 !important;
@@ -935,7 +950,7 @@ input.is-none{
 }
 .isPay .selectedShow.active {
     border-bottom: none;
-    border-radius: 15px 15px 0 0;
+    border-radius: 25px 25px 0 0;
 }
 .isPay .selectedShow:hover {
     opacity: 1;
@@ -979,7 +994,7 @@ input.is-none{
     padding-top: 10px !important;
     height: max-content;
     border-bottom: 2px dashed transparent !important;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 25px 25px;
     padding-bottom: 10px !important;
 }
 .pySection:hover {
@@ -995,7 +1010,7 @@ input.is-none{
 }
 .pySection .paywayo {
     padding: 10px 20px !important;
-    border-radius: 15px !important;
+    border-radius: 25px !important;
     margin-bottom: 5px;
 }
 .pySection .paywayo.active {
@@ -1440,7 +1455,7 @@ input.is-none{
 .subscripteP{
     padding: 20px;
     background-image: var(--iPurpleGradientTR1D2);
-    border-radius: 10px;
+    border-radius: 25px;
     position: relative;
     overflow: hidden;
 }
@@ -1775,8 +1790,8 @@ input[type="radio"] {
 .radio + .input{
     margin-right: 10px;
 }
-.input {
-    font-weight: 600;
+.input, select, option {
+    font-weight: 600 !important;
     letter-spacing: 1.1px;
 }
 .control {
@@ -2068,4 +2083,18 @@ input[type="radio"] {
 .custmInp {
     height: 26px;
     width: 100%;
+}
+
+
+
+
+
+
+
+
+.bookSelections {
+    padding: 30px;
+    background-color: var(--gray10);
+    border-radius: 25px;
+    border: 2px solid var(--iPurple80);
 }
