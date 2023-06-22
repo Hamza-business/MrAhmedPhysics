@@ -136,9 +136,6 @@
     --logogold60: #f7941d; 
     
 }
-.button{
-    border-radius: 25px !important;
-}
 .button.is-gold {
     /* background-color: var(--gold); */
     background-color: var(--iPurple90);
@@ -1129,9 +1126,11 @@ input.is-none{
 
 
 
-
+.noPaddBtm{
+    padding-bottom: 0 !important;
+}
 .section.joinPf.noPaddBtm {
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
 }
 .imgContBoxer2nd{
     /* border-radius: 64% 36% 49% 51% / 31% 18% 82% 69% ; */
@@ -2097,4 +2096,194 @@ input[type="radio"] {
     background-color: var(--gray10);
     border-radius: 25px;
     border: 2px solid var(--iPurple80);
+}
+
+
+
+
+video, .videoConteainer figure{
+    margin: auto !important;
+    display: block;
+    width: 80%;
+}
+iframe{
+    width: 100%;
+}
+.lectureWatch{
+    padding-top: 20px !important;
+}
+.videoConteainer{
+    padding-bottom: 0px;
+}
+.smallNav{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background: var(--gray10);
+}
+.arrow{
+    font-size: 20px;
+}
+@media (max-width: 900px){
+    video{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mytabs{
+    background-color: transparent;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    margin-bottom: 20px;
+}
+.mytabs .tabContent{
+    padding-left: 10px;
+    font-size: 17px;
+    scrollbar-width: thin;
+}
+.mytabs .tabContent img{
+    width: 100%;
+    height: auto;
+}
+.mytabs .tabContent a{
+    text-decoration: underline !important;
+    color: var(--third-color);
+    font-weight: 700;
+    display: block;
+}
+.tab h3{
+    color: var(--iPurple60);
+}
+.tabsBtns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.tabsBtns input[type="radio"]:checked {
+    background-color: var(--logogold30);
+}
+.tabsBtns input[type="radio"] {
+    display: none;
+}
+.tabsBtns .tabfree {
+    padding: 10px 40px 6px 40px;
+    color: var(--iPurple50);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+}
+.tabsBtns .tabfree.active {
+    border-bottom: 2px solid var(--iPurple90);
+    color: var(--iPurple90);
+    border-radius: 15px 15px 0 0;
+    background-color: var(--iPurple01);
+}
+.mytabs .tab {
+    width: 100%;
+    padding: 20px 20px 25px;
+    background: var(--grey10);
+    order: 1;
+    display: none;
+    border-radius: 25px 0px 25px 25px;
+}
+.mytabs .tab.active {
+    display: block;
+}
+.mytabs input[type="radio"]:checked + label {
+    background: var(--third-color);
+    color: var(--main-color);
+}
+.mytabs .title.is-3{
+    margin-bottom: 0.5rem;
+    color:var(--second-color);
+}
+.mytabs .media {
+    margin-left: 30px;
+}
+.mytabs .mediaContainer{
+    border-bottom: 2px solid var(--third-color);
+    margin-bottom: 26px;
+}
+.mytabs .media-content {
+    overflow-x: visible;
+}
+.mytabs .otherQus {
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+.mytabs .media-content .content{
+    margin-bottom: 14px;
+}
+.mytabs .otherQus{
+    display: none;
+}
+.mytabs .otherQus.active{
+    display: block;
+}
+
+.viewLectBox {
+    background-color: var(--gray10);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.tab p {
+    white-space: normal;
+}
+
+
+.tabs p.lecture-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--iPurpleD) !important;
+}
+.tabs .card i {
+    color: var(--iPurpleD);
+}
+.tabs a.column{
+    padding: .75rem !important;
+    border: 0 !important;
+    text-decoration: none !important;
+    transition: 0.2s transform;
+}
+.tabs a.column .card{
+    border-radius: 15px;
+    background: var(--graySh);
+    box-shadow: 0 0 15px -5px var(--iPurple100);
+}
+.tabs a.column .card .card-content img{
+    border-radius: 10px;
+}
+.tabs a.column:hover{
+    transform: scale(102%);
+}
+.column.takeBgPrp {
+    border-radius: 15px 0 0 15px;
+    background: var(--iPurpleGradientTR1D)
+}
+.column.takeBgPrp i{
+    color: var(--grey10)
+}
+
+@media (max-width: 750px){
+    .tabsBtns .tabfree {
+        padding: 6px 20px 3px 20px;
+    }
 }
