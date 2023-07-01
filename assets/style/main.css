@@ -2541,3 +2541,11 @@ iframe{
 .fa-chevron-left{
     padding-right: 5px;
 }
+
+
+.videoConteainer{
+    display: none;
+}
+.videoConteainer.show{
+    display: block;
+}
