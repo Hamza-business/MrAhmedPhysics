@@ -3093,10 +3093,10 @@ a.tag:hover {
 }
 
 .input[disabled], .select fieldset[disabled] select, .select select[disabled], .textarea[disabled], fieldset[disabled] .input, fieldset[disabled] .select select, fieldset[disabled] .textarea {
-    background-color: #f5f5f5;
-    border-color: #f5f5f5;
+    background-color: #ececec;
+    border-color: #ececec;
     box-shadow: none;
-    color: #7a7a7a
+    color: #606060;
 }
 
 .input[disabled]::-moz-placeholder, .select fieldset[disabled] select::-moz-placeholder, .select select[disabled]::-moz-placeholder, .textarea[disabled]::-moz-placeholder, fieldset[disabled] .input::-moz-placeholder, fieldset[disabled] .select select::-moz-placeholder, fieldset[disabled] .textarea::-moz-placeholder {

@@ -13,100 +13,153 @@
     <link rel="stylesheet" href="/assets/style/all.min.css">
 </head>
 <body>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="side-bar menu">
-            <div class="close-btn">
-                <i class="fas fa-times"></i>
-            </div>
-            <div class="menu">
-                <div class="item">
-                    <a href="#" class="is-actives"><i class="fas fa-home"></i>الرئيسية</a>
-                </div>
-                <div class="item">
-                    <a class="sub-btn"><i class="fas fa-chalkboard"></i>المحاضرات<i class="fas fa-angle-left angle"></i></a>
-                    <div class="sub-menu">
-                        <a href="new-lecture/" class="sub-item">محاضرة جديدة</a>
-                        <a href="all-lecture/" class="sub-item">جميع المحاضرات</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="all-quiz/" class="sub-item"><i class="fas fa-file"></i>جميع الاختبارات</a>
-                </div>
-                <div class="item">
-                    <a class="sub-btn"><i class="fas fa-pallet"></i>الطلبات<i class="fas fa-angle-left angle"></i></a>
-                    <div class="sub-menu">
-                        <div class="item SubItem">
-                            <a class="sub-btn"><i class="fas fa-question"></i>الاسئلة<i class="fas fa-angle-left angle"></i></a>
-                            <div class="sub-menu">
-                                <a href="QRemain/" class="sub-item">الأسئلة المتبقية</a>
-                                <a href="AllQS/" class="sub-item">جميع الاسئلة</a>
-                            </div>
-                        </div>
-                        <div class="item SubItem">
-                            <a class="sub-btn"><i class="fas fa-headset"></i>الدعم الفني<i class="fas fa-angle-left angle"></i></a>
-                            <div class="sub-menu">
-                                <a href="Supp-Remain/" class="sub-item">الأسئلة المتبقية</a>
-                                <a href="All-SuppRemain/" class="sub-item">جميع الاسئلة</a>
-                            </div>
-                        </div>
-                        <div class="item SubItem">
-                            <a class="sub-btn"><i class="fas fa-charging-station"></i>شحن الرصيد<i class="fas fa-angle-left angle"></i></a>
-                            <div class="sub-menu">
-                                <a href="Charge-Remain/" class="sub-item">الأسئلة المتبقية</a>
-                                <a href="All-Charge/" class="sub-item">جميع الطلبات</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div style="display: none" id="pageTitle">dashboard</div>
 
 
-        <section class="main">
-            <p class="subtitle is-3">بياناتي</p>
-            <div class="stData">
-                <form class="">
-                    <div class="columns is-multiline">
-                        <div class="column is-4">
-                            <div class="field">
-                                <label class="label has-text-purple-dark">اسم الطالب</label>
-                                <div class="control">
-                                    <input class="input inputToChange" type="text" placeholder="ادخل اسم الطالب">
-                                    <button class="button save-button is-gold">حفظ</button>
-                                </div>
+    <header class="navbar" role="navigation" aria-label="main navigation" class="linksMenu">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="/">
+                <img src="/assets/images/logo.png">
+            </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/" whtpg="home" class="navbar-item"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="/learn" whtpg="learn" class="navbar-item"><i class="fa-solid fa-tv"></i><span>المحاضرات</span></a>
+                <a href="/books" whtpg="sheets" class="navbar-item"><i class="fa-solid fa-book"></i><span>الكتب</span></a>
+            </div>
+    
+            <div class="navbar-end">
+                <a class="navbar-item responsivePadd" whtpg="dashboard" href="/dashboard"><i class="fas fa-user-circle"></i></a>
+                <button class="navbar-item responsivePadd" showPop="notifications"><i class="fa-solid fa-bell"></i></button>
+                <button class="navbar-item responsivePadd" mode="modeChange"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobileHeader is-flex is-justify-content-space-evenly">
+        <a class="navbar-item mobileHide" href="/" whtpg="home"><i class="fa-solid fa-house"></i></a>
+        <a class="navbar-item mobileHide" href="/learn" whtpg="learn"><i class="fa-solid fa-tv"></i></a>
+        <a class="navbar-item mobileHide" href="/books" whtpg="sheets"><i class="fa-solid fa-book"></i></a>
+        <a class="navbar-item mobileHide" href="/dashboard" whtpg="dashboard"><i class="fas fa-user-circle"></i></a>
+        <button class="navbar-item responsivePadd" showPop="notifications"><i class="fa-solid fa-bell"></i></button>
+        <button class="navbar-item mobileHide" mode="modeChange"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+    </nav>
+
+
+
+    <div class="contentBox">
+        <div class="section customsed">
+            <div class="columns is-multiline">
+
+                <div class="column is-one-fifth customeColm sider">
+                    <div class="burgerIcon">
+                        <i class="fas fa-stream" id="showHideSideBar"></i>
+                    </div>
+                    <div class="sideContent">
+                        <div class="item">
+                            <a href="#" class="is-actives"><i class="fa-solid fa-file-lines"></i>بياناتي</a>
+                        </div>
+                        <div class="item">
+                            <a class="sub-btn"><i class="fas fa-chalkboard"></i>المحاضرات<i class="fas fa-angle-left angle"></i></a>
+                            <div class="sub-menu">
+                                <a href="new-lecture/" class="sub-item">محاضرة جديدة</a>
+                                <a href="all-lecture/" class="sub-item">جميع المحاضرات</a>
                             </div>
                         </div>
-                        <div class="column is-4">
-                            <div class="field">
-                                <label class="label has-text-purple-dark">رقم هاتف الطالب</label>
-                                <div class="control">
-                                    <input class="input inputToChange" type="text" placeholder="ادخل رقم الهاتف للطالب">
-                                    <button class="button save-button is-gold">حفظ</button>
+                        <div class="item">
+                            <a href="all-quiz/" class="sub-item"><i class="fas fa-file"></i>جميع الاختبارات</a>
+                        </div>
+                        <div class="item">
+                            <a class="sub-btn"><i class="fas fa-pallet"></i>الطلبات<i class="fas fa-angle-left angle"></i></a>
+                            <div class="sub-menu">
+                                <div class="item SubItem">
+                                    <a class="sub-btn"><i class="fas fa-question"></i>الاسئلة<i class="fas fa-angle-left angle"></i></a>
+                                    <div class="sub-menu">
+                                        <a href="QRemain/" class="sub-item">الأسئلة المتبقية</a>
+                                        <a href="AllQS/" class="sub-item">جميع الاسئلة</a>
+                                    </div>
+                                </div>
+                                <div class="item SubItem">
+                                    <a class="sub-btn"><i class="fas fa-headset"></i>الدعم الفني<i class="fas fa-angle-left angle"></i></a>
+                                    <div class="sub-menu">
+                                        <a href="Supp-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                                        <a href="All-SuppRemain/" class="sub-item">جميع الاسئلة</a>
+                                    </div>
+                                </div>
+                                <div class="item SubItem">
+                                    <a class="sub-btn"><i class="fas fa-charging-station"></i>شحن الرصيد<i class="fas fa-angle-left angle"></i></a>
+                                    <div class="sub-menu">
+                                        <a href="Charge-Remain/" class="sub-item">الأسئلة المتبقية</a>
+                                        <a href="All-Charge/" class="sub-item">جميع الطلبات</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column is-4">
-                            <div class="field">
-                                <label class="label has-text-purple-dark">رقم هاتف ولي الامر</label>
-                                <div class="control">
-                                    <input class="input inputToChange" type="text" placeholder="ادخل رقم هاتف الأب">
-                                    <button class="button save-button is-gold">حفظ</button>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="column is-4 has-text-weight-semibold">
-                            <p>رقم الجروب <span class="has-text-primary-dark">22</span></p>
-                        </div>
-                        <div class="column is-4 has-text-weight-semibold">
-                            <p>الصف الدراسي: <span class="has-text-primary-dark">3 ث</span></p>
                         </div>
                     </div>
-                </form>
+                </div>
+
+                <div class="column customeColm contentColumn">
+                    <h1 class="title is-size-3 has-text-weight-semibold is-gold">بياناتي</h1>
+                    <form class="">
+                        <div class="columns is-multiline">
+                            <div class="column is-4">
+                                <div class="field">
+                                    <label class="label has-text-purple-dark">اسم الطالب</label>
+                                    <div class="control">
+                                        <input class="input inputToChange" type="text" disabled="true" value="1234">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-4">
+                                <div class="field">
+                                    <label class="label has-text-purple-dark">رقم هاتف الطالب</label>
+                                    <div class="control">
+                                        <input class="input inputToChange" type="text" disabled="true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-4">
+                                <div class="field">
+                                    <label class="label has-text-purple-dark">رقم هاتف ولي الامر</label>
+                                    <div class="control">
+                                        <input class="input inputToChange" type="text" disabled="true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-4">
+                                <div class="field">
+                                    <label class="label has-text-purple-dark">الصف الدراسي</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select required oninput="">
+                                                <option value="2ndSecond">ثاني ثانوي</option>
+                                                <option value="3rdSecond">ثالث ثانوي</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="column is-4 has-text-weight-semibold opopText">
+                                <p>رقم الجروب <span class="has-text-primary-dark">22</span></p>
+                            </div>
+                            <div class="column is-4 has-text-weight-semibold opopText">
+                                <p>حالة المتابعة: <span><i class="fa-solid fa-check has-text-primary-dark"></i><i class="fa-solid fa-xmark has-text-danger"></i></span></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </div>
+
+
+<!-- 
+     -->
 
 </body>
 </html>
@@ -114,6 +167,12 @@
 <script src="/assets/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 <script>
+    let burgerIconSide = document.querySelector(".burgerIcon")
+    let sider = document.querySelector(".sider")
+    burgerIconSide?.addEventListener('click', ()=>{
+        sider.classList.toggle('hide');
+    })
+    
     $(document).ready(function(){
         $('.sub-btn')?.click(function(){
             $(this).next('.sub-menu').slideToggle();
@@ -130,14 +189,4 @@
             $('.menu-btn').css("visibility", "visible");
         });
     });
-</script>
-<script>
-    const inputToChange = document.querySelectorAll(".inputToChange");
-    const saveButton = document.querySelectorAll(".save-button");
-
-    inputToChange.forEach((ele)=>{
-        ele?.addEventListener('input', ()=>{
-            ele.nextElementSibling.classList.add('btnShow')
-        })
-    })
 </script>
