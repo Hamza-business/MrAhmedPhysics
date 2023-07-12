@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="column customeColm contentColumn">
-                    <h1 class="title is-size-3 has-text-weight-semibold is-gold">اسئلتي</h1>
+                    <h1 class="title is-size-3 has-text-weight-semibold is-gold">كامل المحادثة</h1>
                     <div class="chat-thread-box">
                         <div class="chat-thread">
                             <div class="chat-message">
@@ -116,9 +116,7 @@
                                 <p class="is-size-5 has-text-weight-medium has-text-grey-lighter">Hello! jjdcevej kf  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta accusantium voluptates harum, eaque ab officiis placeat laborum quod in libero culpa saepe recusandae ipsam, eius nihil, magnam vel ad inventore.</p>
                                 <img src="https://via.placeholder.com/1280x200" alt="Sender 1">
                             </div>
-                            <a href="" class="button is-gold is-small">عرض باقي المحادثة</a>
-                        </div>
-                        <div class="chat-thread">
+
                             <div class="chat-message">
                                 <p class="is-size-6 has-text-weight-semibold">اسم الطالب</p>
                                 <p class="is-size-5 has-text-weight-medium">Hello! jjdcevej kf  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta accusantium voluptates harum, eaque ab officiis placeat laborum quod in libero culpa saepe recusandae ipsam, eius nihil, magnam vel ad inventore.</p>
@@ -130,7 +128,18 @@
                                 <p class="is-size-5 has-text-weight-medium has-text-grey-lighter">Hello! jjdcevej kf  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta accusantium voluptates harum, eaque ab officiis placeat laborum quod in libero culpa saepe recusandae ipsam, eius nihil, magnam vel ad inventore.</p>
                                 <img src="https://via.placeholder.com/1280x200" alt="Sender 1">
                             </div>
-                            <a href="chat/index.html" class="button is-gold is-small">عرض باقي المحادثة</a>
+
+                            <div class="chat-message">
+                                <p class="is-size-6 has-text-weight-semibold">اسم الطالب</p>
+                                <p class="is-size-5 has-text-weight-medium">Hello! jjdcevej kf  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta accusantium voluptates harum, eaque ab officiis placeat laborum quod in libero culpa saepe recusandae ipsam, eius nihil, magnam vel ad inventore.</p>
+                                <img src="https://via.placeholder.com/1280x200" alt="Sender 1">
+                            </div>
+                          
+                            <div class="chat-message replay">
+                                <p class="is-size-6 has-text-weight-semibold has-text-grey-lighter">اسم المدرس</p>
+                                <p class="is-size-5 has-text-weight-medium has-text-grey-lighter">Hello! jjdcevej kf  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta accusantium voluptates harum, eaque ab officiis placeat laborum quod in libero culpa saepe recusandae ipsam, eius nihil, magnam vel ad inventore.</p>
+                                <img src="https://via.placeholder.com/1280x200" alt="Sender 1">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,5 +176,22 @@
             $('.side-bar').removeClass('active');
             $('.menu-btn').css("visibility", "visible");
         });
+    });
+</script>
+
+<script>
+    function viewImage(input) {
+        const fileName = input.files[0].name;
+        const fileNameSpan = input.parentNode.parentNode.querySelector('.file-name');
+        fileNameSpan.textContent = fileName;
+    }
+</script>
+
+<script src="https://cdn.tiny.cloud/1/md6pfmgsvm2oc4qrjkujru60o0a711nrcklx1657fgxlwv87/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
     });
 </script>
