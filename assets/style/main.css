@@ -1003,7 +1003,7 @@ input.input, .select select {
     color: var(--iPurpleD30);
 }
 
-a.is-gold, p.is-gold, span.is-gold, h1.is-gold {
+a.is-gold, p.is-gold, span.is-gold, h1.is-gold, h2.is-gold {
     color: var(--iPurple90);
 }
 
@@ -1078,7 +1078,7 @@ input.is-none {
 
 
 .isPay {
-    border: 2px solid var(--iPurple30);
+    border: 2px solid var(--iPurple30) !important;
     border-radius: 25px !important;
 }
 
@@ -1876,6 +1876,7 @@ input.is-none {
 
 .lectsGridParent .column .card {
     border-radius: 15px !important;
+    overflow: hidden;
 }
 
 
@@ -2235,6 +2236,15 @@ input[type="radio"] {
     overflow-y: auto;
     text-align: right;
 }
+.column.customeColm.contentColumn:not(.sider) {
+    margin: 35px 10px;
+    border: 2px solid var(--iPurple30);
+    border-radius: 30px;
+    height: calc(100vh - 108px);
+    max-height: calc(100vh - 108px);
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+    background: var(--iPurple01);
+}
 .contentColumn{
     padding-top: 30px;
 }
@@ -2261,6 +2271,32 @@ input[type="radio"] {
 .customsed .sider.hide .sideContent{
     opacity: 0;
 }
+
+
+.chat-thread{
+    padding: 20px 10px;
+    border-bottom: 3px solid var(--iPurple05);
+}
+.chat-message {
+  margin-bottom: 10px;
+  background: var(--whiteBg);
+  padding: 13px;
+  border-radius: 20px 0 20px 20px;
+}
+
+.message-content {
+  margin-right: 0.5rem;
+}
+.chat-message.replay{
+    margin-right: 20px;
+    background: var(--iPurpleGD);
+    padding: 13px;
+    border-radius: 0px 20px 20px 20px;
+}     
+.is-bg-lii{
+    background: var(--iPurple01) !important;
+}
+
 @media (max-width: 769px){
     .customsed .sider {
         max-height: 200px !important;
@@ -2994,4 +3030,27 @@ iframe {
 
 .videoConteainer.show {
     display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-content .button.is-gold.is-outlined.is-fullwidth {
+  display: block;
+  white-space: pre-line;
+  height: fit-content;
+  font-size: 15px;
 }
