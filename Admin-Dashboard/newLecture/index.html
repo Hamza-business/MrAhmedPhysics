@@ -171,17 +171,15 @@
                 <label class="label">بانر المحاضرة</label>
                 <div class="file has-name is-prpl">
                     <label class="file-label is-flex is-flex-direction-column">
-                        <input class="file-input" type="file" onchange="viewImage(this, 'lectureBanner')" accept="image/*">
+                        <input class="file-input" type="file" onchange="showFiles(this, 'lectureBanner')" accept="image/*" multiple accept="image/*">
                         <span class="file-cta">
                             <span class="file-icon">
                                 <i class="fas fa-upload"></i>
                             </span>
                             <span class="file-label">اختر ملف...</span>
                         </span>
-                        <div class="has-text-centered imageBoxer">
-                            <img src="" alt="">
-                        </div>
                         <span class="file-name"></span>
+                        <span class="file-count"></span>
                     </label>
                 </div>
             </div>
@@ -237,5 +235,21 @@
         const fileName = input.files[0].name;
         const fileNameSpan = input.parentNode.parentNode.querySelector('.file-name');
         fileNameSpan.textContent = fileName;
+    }
+
+    function showFiles(input, imageId) {
+        const reader = new FileReader();
+
+        const fileNameSpan = input.parentNode.parentNode.querySelector('.file-name');
+        const fileCountSpan = input.parentNode.parentNode.querySelector('.file-count');
+        
+        const files = input.files;
+        console.log(typeof file)
+        for(ele of files){
+            fileNameSpan.textContent += `${ele.name},`
+        }
+
+
+        fileCountSpan.textContent = `اجمالي الملفات: ${input.files.length}`;
     }
 </script>
